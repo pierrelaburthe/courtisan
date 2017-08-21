@@ -14,7 +14,6 @@ class ChallengesController < ApplicationController
   end
 
   def wait
-
   end
 
   def finished
