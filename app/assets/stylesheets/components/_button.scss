@@ -1,10 +1,15 @@
 .btn-red-custom {
-  color: white;
+  font-weight: lighter;
+  color: #3B0944;
   padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: 50px;
+  font-weight: lighter;
+  // font-weight: bold;
   background: #750800;
+  // margin-top: 50vh;
   transition: background 0.3s ease;
+  width: 200px;
+  margin-bottom: 100px;
 }
 .btn-red-custom:hover {
   opacity: 1;

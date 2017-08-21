@@ -5,22 +5,27 @@
   text-align: center;
 }
 
-
 .banner {
   background-size: cover;
   background-position:center center;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   text-align: center;
+  align-items: center;
   height: calc(100vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .banner-content{
+    height: 90vh;
+    display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-between;
+  align-items:center;
+}
+  // position: relative;
 }
 .banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  // font-weight: bold;
+  // text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 .banner p {
   font-size: 25px;
@@ -30,3 +35,19 @@
   margin-bottom: 30px;
 }
 
+.banner-message{
+    font-size: 50px;
+  margin-top: 0px;
+  padding-top:40px;
+  font-weight:lighter;
+// position: absolute;
+// top: 20px;
+// left: 50vh;
+}
+
+.btn-red-custom {
+
+  // position: absolute;
+  // bottom: 20vh;
+  // left: 50vh;
+}
