@@ -10,10 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821134526) do
+ActiveRecord::Schema.define(version: 20170821142836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.bigint "seducer1_id"
+    t.bigint "seducer2_id"
+    t.bigint "seduced_id"
+    t.bigint "winner_id"
+    t.boolean "duel_finished"
+    t.integer "current_round"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seduced_id"], name: "index_challenges_on_seduced_id"
+    t.index ["seducer1_id"], name: "index_challenges_on_seducer1_id"
+    t.index ["seducer2_id"], name: "index_challenges_on_seducer2_id"
+    t.index ["winner_id"], name: "index_challenges_on_winner_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "content"
+    t.bigint "challenge_id"
+    t.integer "liked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_id"], name: "index_messages_on_challenge_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +54,24 @@ ActiveRecord::Schema.define(version: 20170821134526) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gender"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "i_am"
+    t.string "i_like"
+    t.string "i_look_for"
+    t.string "status"
+    t.integer "victories"
+    t.integer "defeats"
+    t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "challenges", "users", column: "seduced_id"
+  add_foreign_key "challenges", "users", column: "seducer1_id"
+  add_foreign_key "challenges", "users", column: "seducer2_id"
+  add_foreign_key "challenges", "users", column: "winner_id"
+  add_foreign_key "messages", "challenges"
+  add_foreign_key "messages", "users"
 end
