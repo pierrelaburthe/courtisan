@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :users, except: [:destroy, :show] do
-    ressources :challenges, only: [:show, :new, :create]
+    resources :challenges, only: [:show, :new, :create]
   end
 
   get 'challenges/wait'
