@@ -7,7 +7,18 @@ class User < ApplicationRecord
   has_many :messages
   has_many :challenges
 
-  validates :email, :first_name, :last_name, :gender, :i_am, :i_like, :i_look_for, :status, :age, presence: true
+  validates :email, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :status, presence: true
+  validates :i_am, presence: true
+  validates :i_like, presence: true
+  validates :i_look_for, presence: true
+  validates :gender, presence: true
+  validates :age, presence: true
+
+
+  CHOIX = ["courtiser", "se faire courtiser"]
 
 end
 
