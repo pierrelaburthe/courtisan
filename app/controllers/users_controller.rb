@@ -10,9 +10,9 @@ class UsersController < ApplicationController
   @user = User.new(user_params)
   if @user.save
     redirect user_path(@user)
-    UsertMailer.creation_confirmation(@user).deliver_now
-  end
+  else
     render :new
+  end
  end
 
  def edit
@@ -31,8 +31,9 @@ class UsersController < ApplicationController
  def set_users
    @user = User.find(params[:id])
  end
+
  def user_params
-  params.require(:user).permit(:email, :first_name, :last_name, :gender, :i_am, :i_like, :i_look_for, :status, :age)
+  params.require(:user).permit(:email, :password, :first_name, :last_name, :gender, :i_am, :i_like, :i_look_for, :status, :age)
  end
 
 
