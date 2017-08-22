@@ -17,11 +17,11 @@
 
 a.navbar-courtisan-brand {
   margin:auto;
-
-
-
 }
 
+.logo-padded {
+  padding-left: 200px;
+}
 
 
 /* User Avatar */
@@ -85,6 +85,7 @@ a.navbar-courtisan-brand {
   border-top: 1px solid #E6E6E6;
 }
 
-#regles {
-  text-decoration: none;
+#lien-regles {
+  scroll-behavior: smooth;
+
 }

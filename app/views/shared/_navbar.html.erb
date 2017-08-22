@@ -1,7 +1,11 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-courtisan-brand" do %>
-    <%= image_tag "logo.png" %>
+  <% if user_signed_in? %>
+  <%= image_tag "logo.png"%>
+  <% else %>
+    <%= image_tag "logo.png", class: "logo-padded" %>
+     <% end %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -39,7 +43,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <a href="#regles" class="navbar-wagon-item navbar-wagon-link">Regles du jeu</a>
+      <a href="#regles" class="navbar-wagon-item navbar-wagon-link" id="lien-regles">Regles du jeu</a>
       <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
