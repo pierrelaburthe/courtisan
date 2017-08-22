@@ -16,9 +16,4 @@ class CreateChallenges < ActiveRecord::Migration[5.1]
     add_foreign_key :challenges, :users, column: :winner_id
   end
 
-  after_initialize :set_duel_finished
-
-  def set_duel_finished
-    self.duel_finished = "false"
-  end
 end
