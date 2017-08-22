@@ -6,10 +6,11 @@
         <h1 class ="banner-message quotes" >Séduire, briller, triompher.</h1>
         <h1 class ="banner-message quotes" >La séduction est un spectacle, sois le meilleur acteur.</h1>
 
+
         <% if user_signed_in? %>
           <%= link_to "Jouer", new_user_challenge_path(current_user), class: "btn-red-custom btn-lg active" %>
         <% else %>
-          <%= link_to "Jouer", new_user_path, class: "btn-red-custom btn-lg active" %>
+          <%= link_to "Jouer", new_user_session_path, class: "btn-red-custom btn-lg active" %>
         <% end %>
       </div>
     </div>
