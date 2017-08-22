@@ -1,7 +1,12 @@
   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(<%= image_path 'fille.jpeg'%>);">
       <div class="banner-content">
         <h1 class ="banner-message" >Jouons la séduction</h1>
-        <a href="#" class="btn-red-custom btn-lg active" role="button" aria-pressed="true">S'inscrire</a>
+        <% if user_signed_in? %>
+          <%= link_to "Jouer", root_path , class: "btn-red-custom btn-lg active" %>
+        <% else %>
+          <%= link_to "Jouer", new_user_path, class: "btn-red-custom btn-lg active" %>
+        <% end %>
+      <!--   <a href="#" class="btn-red-custom btn-lg active" role="button" aria-pressed="true">S'inscrire</a> -->
       </div>
     </div>
                       <div class="maxi-row">
