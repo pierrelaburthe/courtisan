@@ -1,4 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(<%= image_path 'fille.jpg'%>);">
+<div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(<%= image_path 'fille.jpg'%>);">
+
+         <%= render 'shared/navbar' %>
+
+
+
       <div class="banner-content">
         <h1 class ="banner-message quotes" >Une plume, un adversaire, un vainqueur.</h1>
         <h1 class ="banner-message quotes" >La séduction est une compétition.</h1>
@@ -16,9 +21,6 @@
       </div>
     </div>
 
-
-
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -33,7 +35,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <div class="feature-item">
-            <h3>Humilie tes adversaires</h3>
+            <h3><span class="underline">Humilie</span> tes adversaires</h3>
             <p class="text-muted">« Te voila dans l'arène, brille par ton éloquence et fait tourner les têtes.
             La victoire est à portée de mots. »</p>
       </div>
@@ -41,14 +43,14 @@
     </div>
     <div class="item">
       <div class="feature-item">
-          <h3 id="regles"> Sublime ton éloquence</h3>
+          <h3 id="regles"> <span class="underline">Sublime</span> ton éloquence</h3>
           <p class="text-muted">« A visage masqué, joute contre d'autres prétendant.e.s et gagne les faveurs de ton public. Attrape les tous.tes. »</p>
       </div>
       <div class="carousel-caption"></div>
     </div>
     <div class="item">
       <div class="feature-item">
-          <h3>Entretiens tes conquêtes</h3>
+          <h3><span class="underline">Entretiens</span> tes conquêtes</h3>
           <p class="text-muted">«  Les victoires te donnent la possibilité d'entrer en contact avec tes conquêtes. C'est le moment de se mettre bien. »</p>
       </div>
     <div class="carousel-caption">
@@ -79,7 +81,7 @@
     <a href="#"><i class="fa fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    Courtisan, enfin le retour de la séduction <i class="fa fa-heart"></i>
+    Courtisan, le retour de la séduction <i class="fa fa-heart"></i>
   </div>
 </div>
 
