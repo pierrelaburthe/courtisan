@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users, except: [:destroy, :show] do
-    resources :challenges, only: [:show, :new, :create]
+    resources :challenges, only: [:show, :new, :create] do
+      resources :messages, only: [:create]
+    end
   end
 
   get 'challenges/wait'
