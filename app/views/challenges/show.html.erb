@@ -1,18 +1,42 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-offset-1 col-md-10">
+<div class="container-messenger">
 
-      <%= simple_form_for [current_user, @challenge, @message] do |f| %>
-        <%= f.error_notification %>
-        <%= f.input :content, label: "" %>
+
+
+  <div class="container-messages">
+  <div class="header-messenger">
+  <h2> Round 1 </h2>
+    <div class="avatar-time"> 8 </div>
+</div>
+
+    <div class="row">
+      <% @challenge.messages.each do |message| %>
+        <div class="col-md-6 col-md-offset-6" >
+        <div class="message-body">
+          <div class="message-content">
+            <%= message.content %>
+          </div>
+          <div class="message-footer">
+            <%= message.user.first_name %>
+          </div>
+      </div>
+      </div>
       <% end %>
+    </div>
+  </div>
+
+  <div class="container-input">
+    <div class="row">
+      <div class="col-xs-12 col-md-offset-1 col-md-10">
+        <%= simple_form_for [current_user, @challenge, @message] do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :content, label: "" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
 
-<% @challenge.messages.each do |message| %>
-<%= message.content %>
-<% end %>
+
 
 
 
