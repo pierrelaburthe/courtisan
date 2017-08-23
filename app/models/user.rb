@@ -12,12 +12,16 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :status, presence: true
-  validates :i_am, presence: true
-  validates :i_like, presence: true
-  validates :i_look_for, presence: true
-  validates :gender, presence: true
-  validates :age, presence: true
+
+  def profilecompleted?
+    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age != nil
+  end
+  # validates :status, presence: true
+  # validates :i_am, presence: true
+  # validates :i_like, presence: true
+  # validates :i_look_for, presence: true
+  # validates :gender, presence: true
+  # validates :age, presence: true
 
 
   CHOIX = ["courtiser", "se faire courtiser"]

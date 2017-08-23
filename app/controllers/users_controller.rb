@@ -16,18 +16,18 @@ class UsersController < ApplicationController
  end
 
  def profile
-  @user = current_user
  end
 
  def edit
  end
 
  def update
-   @user.update(user_params)
-   if @user.save
-    redirect user_path(@user)
-  end
+   current_user.update(user_params)
+   if current_user.save
+    redirect_to root_path
+  else
     render :new
+  end
  end
 
  private
