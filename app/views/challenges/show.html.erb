@@ -1,12 +1,16 @@
 <div class="container-messenger">
-<div class="header-messenger">
-  <h2> Round 1 </h2>
-  <div class="avatar-time"> 8 </div>
-</div>
+
+
+
   <div class="container-messages">
+  <div class="header-messenger">
+  <h2> Round 1 </h2>
+    <div class="avatar-time"> 8 </div>
+</div>
+
     <div class="row">
       <% @challenge.messages.each do |message| %>
-        <div class="col-md-6 col-md-offset-5" >
+        <div class="col-md-6 col-md-offset-6" >
         <div class="message-body">
           <div class="message-content">
             <%= message.content %>
