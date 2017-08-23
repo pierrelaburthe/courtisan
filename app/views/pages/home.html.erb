@@ -2,29 +2,56 @@
 
          <%= render 'shared/navbar' %>
 
+      <% if user_signed_in? %>
 
 
-      <div class="banner-content">
+        <div class="banner-content">
+          <% if current_user.status == "courtiser" %>
+            <% if current_user.gender == "Homme" %>
+              <h1 class ="banner-message " >Vous êtes courtisan</h3>
+            <% else %>
+              <h1 class ="banner-message ">Vous êtes courtisane</h3>
+            <% end %>
+          <% else %>
+            <% if current_user.gender == "Homme" %>
+              <h1 class ="banner-message ">Vous êtes courtisé</h3>
+            <% else %>
+              <h1 class ="banner-message ">Vous êtes courtisée</h3>
+            <% end %>
+          <% end %>
+
+
+
+        <%= form_for [current_user, @challenge] do |f| %>
+          <%= f.hidden_field :seducer1_id, value: User.first.id %>
+          <%= f.hidden_field :seduced_id, value: User.last.id  %>
+          <%= f.hidden_field :current_round, value: 0 %>
+          <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active" %>
+        <% end %>
+
+
+        </div>
+
+      <% else %>
+
+        <div class="banner-content">
         <h1 class ="banner-message quotes" >Une plume, un adversaire, un vainqueur.</h1>
         <h1 class ="banner-message quotes" >La séduction est une compétition.</h1>
         <h1 class ="banner-message quotes" >Enfin. Le retour de la séduction.</h1>
         <h1 class ="banner-message quotes" >Séduire, briller, triompher.</h1>
         <h1 class ="banner-message quotes" >La séduction est un spectacle, sois le meilleur acteur.</h1>
 
-
-        <% if user_signed_in? %>
-          <%= link_to "Jouer", new_user_challenge_path(current_user), class: "btn-red-custom btn-lg active" %>
-        <% else %>
           <% if devise_mapping.omniauthable? %>
             <% resource_class.omniauth_providers.each do |provider| %>
               <p><%= link_to "Connectez-vous avec #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), {class: "fb-btn"} %></p>
             <% end %>
           <% end %>
-        <% end %>
+
+      <% end %>
 
 
 
-       
+
       </div>
  </div>
 
