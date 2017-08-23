@@ -14,7 +14,7 @@ class ChallengesController < ApplicationController
     @challenge = Challenge.new(challenge_params)
     @challenge.seducer2_id = current_user.id
     if @challenge.save!
-      redirect_to user_challenge_path(user_id: current_user.id, id: @challenge.id)
+      redirect_to user_challenge_path(current_user, @challenge)
     else
       render 'new'
     end

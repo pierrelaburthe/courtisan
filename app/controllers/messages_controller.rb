@@ -1,19 +1,18 @@
 class MessagesController < ApplicationController
 
-before_action :set_message, only: [:create, :liked, :disliked]
+before_action :set_message, only: [:liked, :disliked]
 before_action :set_challenge
 
-  def new
-    @message = Message.new
-  end
+
 
   def create
     @message = Message.new(message_params)
     @message.challenge = @challenge
-    if message.save
-      redirect_to challenge_path(@challenge)
+    @message.user = current_user
+    if @message.save
+      redirect_to user_challenge_path(current_user, @challenge)
     else
-      render 'new'
+      render 'challenges/show'
     end
   end
 
