@@ -1,5 +1,11 @@
-<%= simple_form_for [@challenge, @message] do |f| %>
-<%= f.error_notification %>
-<% f.input :content %>
-<% f.submit "Submit your message" , class: "btn btn-success" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-1 col-md-10">
+
+      <%= simple_form_for [current_user, @challenge, @message] do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :content, label: "" %>
+      <% end %>
+    </div>
+  </div>
+</div>
