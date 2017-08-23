@@ -14,7 +14,19 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Messages
+        <span class="navbar-wagon-item navbar-wagon-link"></span></button>
+        <ul class="dropdown-menu">
+          <% current_user.challenges.each do |challenge| %>
+            <li>
+              <%= link_to challenge.seduced.name, user_challenge_path(current_user, challenge) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

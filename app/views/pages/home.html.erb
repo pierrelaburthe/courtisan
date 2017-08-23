@@ -8,28 +8,26 @@
         <div class="banner-content">
           <% if current_user.status == "courtiser" %>
             <% if current_user.gender == "Homme" %>
-              <h1 class ="banner-message " >Vous êtes courtisan</h3>
+              <h1 class ="banner-message" >Vous êtes courtisan</h3>
             <% else %>
-              <h1 class ="banner-message ">Vous êtes courtisane</h3>
+              <h1 class ="banner-message">Vous êtes courtisane</h3>
             <% end %>
           <% else %>
             <% if current_user.gender == "Homme" %>
-              <h1 class ="banner-message ">Vous êtes courtisé</h3>
+              <h1 class ="banner-message">Vous êtes courtisé</h3>
             <% else %>
-              <h1 class ="banner-message ">Vous êtes courtisée</h3>
+              <h1 class ="banner-message">Vous êtes courtisée</h3>
             <% end %>
           <% end %>
 
 
 
-        <%= form_for [current_user, @challenge] do |f| %>
-          <%= f.hidden_field :seducer1_id, value: User.first.id %>
-          <%= f.hidden_field :seduced_id, value: User.last.id  %>
-          <%= f.hidden_field :current_round, value: 0 %>
-          <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active" %>
-        <% end %>
-
-
+          <%= form_for [current_user, @challenge] do |f| %>
+            <%= f.hidden_field :seducer1_id, value: User.first.id %>
+            <%= f.hidden_field :seduced_id, value: User.last.id  %>
+            <%= f.hidden_field :current_round, value: 0 %>
+            <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active" %>
+          <% end %>
         </div>
 
       <% else %>

@@ -18,6 +18,7 @@ class User < ApplicationRecord
   validates :i_look_for, presence: true
   validates :gender, presence: true
   validates :age, presence: true
+  validates :attracted_by, presence: true
 
 
   CHOIX = ["courtiser", "se faire courtiser"]

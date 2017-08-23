@@ -19,6 +19,7 @@
           <%= f.input :i_look_for, required: true, label: "Je recherche" %>
           <%= f.input :status, required: true, collection: User::CHOIX, label: "Rôle" %>
           <%= f.input :age, required: true, label: "Âge" %>
+          <%= f.input :attracted_by, required: true, label: "Vous êtes attiré(e) par", collection: User::GENDER %>
         </div>
 
         <div class="form-actions">
