@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_reader :sending_challenges
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -7,7 +8,7 @@ class User < ApplicationRecord
 
 
   has_many :messages
-  has_many :challenges
+
 
   validates :email, presence: true
   validates :first_name, presence: true
@@ -18,6 +19,7 @@ class User < ApplicationRecord
   validates :i_look_for, presence: true
   validates :gender, presence: true
   validates :age, presence: true
+  validates :attracted_by, presence: true
 
 
   CHOIX = ["courtiser", "se faire courtiser"]
@@ -44,6 +46,11 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+
+  def sending_challenges
+    Challenge.where(seducer2: self.id)
   end
 
 
