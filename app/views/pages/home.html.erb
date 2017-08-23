@@ -12,14 +12,21 @@
         <h1 class ="banner-message quotes" >La séduction est un spectacle, sois le meilleur acteur.</h1>
 
 
-
-       <% if devise_mapping.omniauthable? %>
-          <% resource_class.omniauth_providers.each do |provider| %>
-           <p><%= link_to "Connectez-vous avec #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), {class: "fb-btn"} %></p>
+        <% if user_signed_in? %>
+          <%= link_to "Jouer", new_user_challenge_path(current_user), class: "btn-red-custom btn-lg active" %>
+        <% else %>
+          <% if devise_mapping.omniauthable? %>
+            <% resource_class.omniauth_providers.each do |provider| %>
+              <p><%= link_to "Connectez-vous avec #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), {class: "fb-btn"} %></p>
+            <% end %>
           <% end %>
         <% end %>
+
+
+
+       
       </div>
-    </div>
+ </div>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->

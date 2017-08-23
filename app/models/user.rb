@@ -22,6 +22,8 @@ class User < ApplicationRecord
 
   CHOIX = ["courtiser", "se faire courtiser"]
 
+  GENDER = ["Homme", "Femme"]
+
   def self.find_for_facebook_oauth(auth)
     # Récuperer plus d'infos pour compléter profil user
     user_params = auth.slice(:provider, :uid)
@@ -43,6 +45,7 @@ class User < ApplicationRecord
 
     return user
   end
+
 
 end
 

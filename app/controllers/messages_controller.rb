@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
 
 before_action :set_message, only: [:create, :liked, :disliked]
+before_action :set_challenge
 
   def new
     @message = Message.new
@@ -8,6 +9,12 @@ before_action :set_message, only: [:create, :liked, :disliked]
 
   def create
     @message = Message.new(message_params)
+    @message.challenge = @challenge
+    if message.save
+      redirect_to challenge_path(@challenge)
+    else
+      render 'new'
+    end
   end
 
   def liked
@@ -25,7 +32,11 @@ before_action :set_message, only: [:create, :liked, :disliked]
   end
 
   def set_message
-    @message = Message.find(:id)
+    @message = Message.find(params[:id])
+  end
+
+  def set_challenge
+    @challenge = Challenge.find(params[:challenge_id])
   end
 
 end
