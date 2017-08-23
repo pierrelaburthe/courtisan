@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-4 col-md-4">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :gender, required: true, collection: User::GENDER, label: "Sexe" %>
+          <%= f.input :age, required: true, label: "Âge" %>
+          <%= f.input :i_am, required: true, label: "Je suis" %>
+          <%= f.input :i_like, required: true, label: "J'aime" %>
+          <%= f.input :i_look_for, required: true, label: "Je recherche" %>
+          <%= f.input :status, required: true, collection: User::CHOIX, label: "Rôle" %>
+          <%= f.button :submit, "Sign up" %>
+          <% end %>
+         </div>
+      </div>
+  </div>
+</div>
