@@ -13,3 +13,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :gender, :i_am, :i_like, :i_look_for, :status, :age])
   end
 end
+
+
+
+current_user.profilecompleted?
