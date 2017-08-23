@@ -19,11 +19,15 @@
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Messages
         <span class="navbar-wagon-item navbar-wagon-link"></span></button>
         <ul class="dropdown-menu">
-          <% current_user.challenges.each do |challenge| %>
+        <% if current_user.sending_challenges.blank? %>
+          <%= link_to "Vous n'avez pas encore de discussion" %>
+        <% else %>
+          <% current_user.sending_challenges.each do |challenge| %>
             <li>
-              <%= link_to challenge.seduced.name, user_challenge_path(current_user, challenge) %>
+              <%= link_to challenge.seduced.first_name, user_challenge_path(current_user, challenge) %>
             </li>
           <% end %>
+        <% end %>
         </ul>
       </div>
 
