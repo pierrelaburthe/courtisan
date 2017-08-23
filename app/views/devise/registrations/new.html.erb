@@ -13,7 +13,7 @@
           <%= f.input :password_confirmation, required: true, label: "Veuillez confirmer votre mot de passe" %>
           <%= f.input :first_name, required: true, label: "Prénom" %>
           <%= f.input :last_name, required: true, label: "Nom" %>
-          <%= f.input :gender, required: true, label: "Sexe" %>
+          <%= f.input :gender, required: true, collection: User::GENDER, label: "Sexe" %>
           <%= f.input :i_am, required: true, label: "Je suis" %>
           <%= f.input :i_like, required: true, label: "J'aime" %>
           <%= f.input :i_look_for, required: true, label: "Je recherche" %>

@@ -9,7 +9,7 @@
         <% if user_signed_in? %>
           <%= link_to "Jouer", new_user_challenge_path(current_user), class: "btn-red-custom btn-lg active" %>
         <% else %>
-          <%= link_to "Jouer", new_user_path, class: "btn-red-custom btn-lg active" %>
+          <%= link_to "Jouer", new_user_session_path, class: "btn-red-custom btn-lg active" %>
         <% end %>
       </div>
     </div>

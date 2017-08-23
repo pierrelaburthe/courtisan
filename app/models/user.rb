@@ -20,6 +20,8 @@ class User < ApplicationRecord
 
   CHOIX = ["courtiser", "se faire courtiser"]
 
+  GENDER = ["Homme", "Femme"]
+
 end
 
 

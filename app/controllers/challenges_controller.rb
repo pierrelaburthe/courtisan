@@ -1,6 +1,8 @@
 class ChallengesController < ApplicationController
 
   def show
+    @message = Message.new
+    @user = User.find(params[:user_id])
     @challenge = Challenge.find(params[:id])
   end
 
@@ -9,8 +11,13 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Challenge.new(seducer1: current_user, seduced: seduced1 , current_round: 0)
-    @challenge.save!
+    @challenge = Challenge.new(challenge_params)
+    @challenge.seducer2_id = current_user.id
+    if @challenge.save!
+      redirect_to user_challenge_path(user_id: current_user.id, id: @challenge.id)
+    else
+      render 'new'
+    end
   end
 
   def wait
@@ -23,7 +30,7 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:seducer1, :seduced, :current_round)
+    params.require(:challenge).permit(:seducer1_id, :seduced_id, :current_round)
   end
 
 end
