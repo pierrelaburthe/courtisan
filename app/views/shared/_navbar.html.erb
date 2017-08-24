@@ -16,7 +16,10 @@
       <!-- Links when logged in -->
 
       <div class="dropdown">
-        <button class="dropdown-toggle" type="button" data-toggle="dropdown"> <i class="fa fa-commenting"></i>
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+
+<%= image_tag "communication.png", class: "logo-drop" %>
+
         </button>
         <ul class="dropdown-menu">
         <% if current_user.sending_challenges.blank? %>
