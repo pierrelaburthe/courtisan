@@ -2,6 +2,8 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+//= require_tree ./channels
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
