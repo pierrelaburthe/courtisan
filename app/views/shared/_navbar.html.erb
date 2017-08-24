@@ -14,7 +14,23 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button" data-toggle="dropdown"> <i class="fa fa-commenting"></i>
+        </button>
+        <ul class="dropdown-menu">
+        <% if current_user.sending_challenges.blank? %>
+          <%= link_to "Vous n'avez pas encore de discussion" %>
+        <% else %>
+          <% current_user.sending_challenges.each do |challenge| %>
+            <li>
+              <%= link_to challenge.seduced.first_name, challenge_path(challenge), class: "text-small" %>
+            </li>
+          <% end %>
+        <% end %>
+        </ul>
+      </div>
+
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -25,11 +41,6 @@
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
               <% end %>
             </li>
             <li>

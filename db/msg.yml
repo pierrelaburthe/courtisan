@@ -1,0 +1,29 @@
+msg_intro:
+  time: 0
+  user: "admin"
+  content: "Voici la carte de votre courtisée."
+  id_pj: "carte_courtisee.png"
+msg_debut_r1:
+  time: 10
+  user: "admin"
+  content: "le round 1 à commencé"
+  id_pj: nil
+msg_courtisee_question:
+  time: 90
+  user: "admin"
+  content: "votre courtisée vous demande"
+  id_pj: "question_courtisee.png"
+msg_debut_r2:
+  time: 100
+  user: "admin"
+  content: "le round 2 à commencé"
+  id_pj: nil
+msg_carte_concurrent:
+  time: 190
+  user: "admin"
+  content: "Voici la carte de votre concurrent"
+  id_pj: "carte_concurrent.png"
+
+
+
+
