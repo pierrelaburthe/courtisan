@@ -26,7 +26,6 @@ class User < ApplicationRecord
   def self.find_for_facebook_oauth(auth)
     # Récuperer plus d'infos pour compléter profil user
     user_params = auth.slice(:provider, :uid)
-    puts user_params
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
     user_params[:facebook_picture_url] = auth.info.image
     user_params[:token] = auth.credentials.token
