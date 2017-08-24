@@ -15,7 +15,7 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(challenge_params)
     @challenge.seducer1 = current_user
-    if @challenge.save!
+    if @challenge.save
       redirect_to challenge_path(@challenge)
     else
       render 'new'

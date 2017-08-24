@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
 
   def profilecompleted?
-    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age != nil
+    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age >= 18
   end
 
   CHOIX = ["Courtiser", "Me faire courtiser"]
@@ -47,12 +47,10 @@ class User < ApplicationRecord
 
 
   def sending_challenges
-    Challenge.where(seducer2: self.id)
+    Challenge.where(seducer1: self.id)
   end
 
-  def sending_messages
-    Message.where()
-  end
+
 
 
 end

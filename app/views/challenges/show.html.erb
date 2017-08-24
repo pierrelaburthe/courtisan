@@ -1,4 +1,6 @@
-<div class="container-messenger" >
+
+<div class="container-messenger" id="container-messenger" >
+
 
   <div class="container-messages previous-color" id="container-messages" >
   <div class="header-messenger">
@@ -7,53 +9,30 @@
           </span>
 
   <h2> Round 1 </h2>
+
     <span class="avatar-time hide" id="smalltime"> start! </span>
+
 </div>
 <div class="body-container-messages">
 <div class = "countdown-text" id = "countdown-text">Le duel débute dans <span id = "bigtime">3</span> secondes. </div>
 
-    <div class="row">
+
 
     <span class = "hide" id = "bigmsg"> Joutez! </span>
 
     <div class = "gif-space" id = "gifspace"></div>
 
     <div class="row">
-
       <% @challenge.messages.each do |message| %>
-        <div class="col-md-6 col-md-offset-6" >
-
-        <div class="message-body <%= message.user == current_user ? "mine" : "" %>">
-          <div class="message-content-me">
-
-            <%= message.content %>
-          </div>
-          <div class="message-footer">
-            <%= message.user.first_name %>
-          </div>
-      </div>
-      </div>
+        <%= render "messages/message", message: message %>
       <% end %>
-
-
-
-<!--             <div class="col-md-6" >
-        <div class="message-body">
-          <div class="message-content-admin">
-            Admin message here
-          </div>
-        </div>
-      </div> -->
     </div>
-</div>
-
-
   </div>
-
+    
   <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
-        <%= simple_form_for [@challenge, @message] do |f| %>
+        <%= simple_form_for [@challenge, @message], remote: true do |f| %>
           <%= f.error_notification %>
           <%= f.input :content, label: "" %>
         <% end %>
@@ -62,7 +41,25 @@
   </div>
 </div>
 
+<% content_for :after_js do %>
+  <script>
+    App.messages = App.cable.subscriptions.create('MessagesChannel', {
+      received: function(data) {
+        console.log(data);
+         $("#messages").removeClass('hidden')
+    return $('#messages').append(this.renderMessage(data));
+  },
 
+  renderMessage: function(data) {
+    return "<p> <b>" + data.user + ": </b>" + data.message + "</p>";
+  }
+});
+
+        // récupérer le conteneur des messages
+        // append le dernier message dedans
+
+  </script>
+<% end %>
 
 
 
