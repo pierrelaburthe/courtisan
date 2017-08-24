@@ -1,9 +1,21 @@
-<div class="container-messenger">
+
+<div class="container-messenger" id="container-messenger" >
+
+
   <div class="container-messages">
   <div class="header-messenger">
+            <span class="message-content-admin" id = "msgadmin">
+            Le duel va commencer...
+          </span>
+
   <h2> Round 1 </h2>
-  <div class="avatar-time"> 8 </div>
+
+    <span class="avatar-time hide" id="smalltime"> start! </span>
+
 </div>
+<div class="body-container-messages">
+<span id = "bigtime">03</span>
+
 
     <div class="row">
       <% @challenge.messages.each do |message| %>
@@ -11,8 +23,8 @@
       <% end %>
     </div>
   </div>
-
-  <div class="container-input">
+    
+  <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
         <%= simple_form_for [@challenge, @message], remote: true do |f| %>
