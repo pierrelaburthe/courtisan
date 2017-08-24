@@ -19,7 +19,7 @@ class User < ApplicationRecord
     self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age != nil
   end
 
-  CHOIX = ["courtiser", "se faire courtiser"]
+  CHOIX = ["Courtiser", "Me faire courtiser"]
 
   GENDER = ["Homme", "Femme"]
 
