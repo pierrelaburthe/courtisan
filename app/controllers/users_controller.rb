@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :profilecompleteduser, only: [:profile, :update]
    # skip_before_action :authenticate_user!, only: :show
  before_action :set_users, only: [:edit]
  # after_create :host_mail_confirmation
@@ -16,18 +17,19 @@ class UsersController < ApplicationController
  end
 
  def profile
-  @user = current_user
+
  end
 
  def edit
  end
 
  def update
-   @user.update(user_params)
-   if @user.save
-    redirect user_path(@user)
-  end
+   current_user.update(user_params)
+   if current_user.save
+    redirect_to root_path
+  else
     render :new
+  end
  end
 
  private

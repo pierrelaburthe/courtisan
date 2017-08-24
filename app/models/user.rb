@@ -13,16 +13,13 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :status, presence: true
-  validates :i_am, presence: true
-  validates :i_like, presence: true
-  validates :i_look_for, presence: true
-  validates :gender, presence: true
-  validates :age, presence: true
-  validates :attracted_by, presence: true
 
 
-  CHOIX = ["courtiser", "se faire courtiser"]
+  def profilecompleted?
+    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age != nil
+  end
+
+  CHOIX = ["Courtiser", "Me faire courtiser"]
 
   GENDER = ["Homme", "Femme"]
 
@@ -51,6 +48,10 @@ class User < ApplicationRecord
 
   def sending_challenges
     Challenge.where(seducer2: self.id)
+  end
+
+  def sending_messages
+    Message.where()
   end
 
 

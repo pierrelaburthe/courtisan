@@ -2,8 +2,10 @@ class ChallengesController < ApplicationController
 
   def show
     @message = Message.new
-    @user = User.find(params[:user_id])
     @challenge = Challenge.find(params[:id])
+    @seducer1 = @challenge.seducer1
+    @seducer2 = @challenge.seducer2
+    @seduced = @challenge.seduced
   end
 
   def new
@@ -12,9 +14,9 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(challenge_params)
-    @challenge.seducer2_id = current_user.id
+    @challenge.seducer1 = current_user
     if @challenge.save!
-      redirect_to user_challenge_path(current_user, @challenge)
+      redirect_to challenge_path(@challenge)
     else
       render 'new'
     end
@@ -30,7 +32,7 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params.require(:challenge).permit(:seducer1_id, :seduced_id, :current_round)
+    params.require(:challenge).permit(:seducer2_id, :seduced_id, :current_round)
   end
 
 end

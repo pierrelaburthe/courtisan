@@ -20,8 +20,10 @@
 
       <% @challenge.messages.each do |message| %>
         <div class="col-md-6 col-md-offset-6" >
-        <div class="message-body">
+
+        <div class="message-body <%= message.user == current_user ? "mine" : "" %>">
           <div class="message-content-me">
+
             <%= message.content %>
           </div>
           <div class="message-footer">
@@ -49,7 +51,7 @@
   <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
-        <%= simple_form_for [current_user, @challenge, @message] do |f| %>
+        <%= simple_form_for [@challenge, @message] do |f| %>
           <%= f.error_notification %>
           <%= f.input :content, label: "" %>
         <% end %>

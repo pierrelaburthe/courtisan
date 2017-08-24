@@ -22,11 +22,9 @@
 
 
 
-
-
-          <%= form_for [current_user, @challenge] do |f| %>
-            <%= f.hidden_field :seducer1_id, value: User.last.id %>
-            <%= f.hidden_field :seduced_id, value: User.first.id  %>
+          <%= form_for @challenge do |f| %>
+            <%= f.hidden_field :seducer2_id, value: User.last.id %>
+            <%= f.hidden_field :seduced_id, value: User.where(gender: "Femme").sample.id  %>
             <%= f.hidden_field :current_round, value: 0 %>
             <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active" %>
           <% end %>
