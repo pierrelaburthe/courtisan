@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :users, except: [:destroy, :show] do
-    resources :challenges, only: [:show, :new, :create] do
-      resources :messages, only: [:create]
-    end
+  resources :users, except: [:destroy, :show]
+  resources :challenges, only: [:new, :create]
+
+  resources :challenges, only: [ :show ] do
+    resources :messages, only: [ :create ]
   end
 
   get 'challenges/wait'
