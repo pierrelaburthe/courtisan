@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
 
   def profilecompleted?
-    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age != nil
+    self.status != nil && self.i_am != nil && self.i_like != nil && self.i_look_for != nil && self.gender != nil && self.age >= 18
   end
 
   CHOIX = ["Courtiser", "Me faire courtiser"]
