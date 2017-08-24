@@ -2,7 +2,7 @@
 <div class="container-messenger" id="container-messenger" >
 
 
-  <div class="container-messages">
+  <div class="container-messages previous-color" id="container-messages" >
   <div class="header-messenger">
             <span class="message-content-admin" id = "msgadmin">
             Le duel va commencer...
@@ -14,8 +14,13 @@
 
 </div>
 <div class="body-container-messages">
-<span id = "bigtime">03</span>
+<div class = "countdown-text" id = "countdown-text">Le duel débute dans <span id = "bigtime">3</span> secondes. </div>
 
+
+
+    <span class = "hide" id = "bigmsg"> Joutez! </span>
+
+    <div class = "gif-space" id = "gifspace"></div>
 
     <div class="row">
       <% @challenge.messages.each do |message| %>
