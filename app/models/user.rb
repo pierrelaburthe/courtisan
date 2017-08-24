@@ -50,12 +50,10 @@ class User < ApplicationRecord
 
 
   def sending_challenges
-    Challenge.where(seducer2: self.id)
+    Challenge.where(seducer1: self.id)
   end
 
-  def sending_messages
-    Message.where()
-  end
+
 
 
 end

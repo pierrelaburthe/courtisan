@@ -1,25 +1,13 @@
 <div class="container-messenger">
-
-
-
   <div class="container-messages">
   <div class="header-messenger">
   <h2> Round 1 </h2>
-    <div class="avatar-time"> 8 </div>
+  <div class="avatar-time"> 8 </div>
 </div>
 
     <div class="row">
       <% @challenge.messages.each do |message| %>
-        <div class="col-md-6 col-md-offset-6" >
-        <div class="message-body <%= message.user == current_user ? "mine" : "" %>">
-          <div class="message-content">
-            <%= message.content %>
-          </div>
-          <div class="message-footer">
-            <%= message.user.first_name %>
-          </div>
-      </div>
-      </div>
+        <%= render "messages/message", message: message %>
       <% end %>
     </div>
   </div>
@@ -27,7 +15,7 @@
   <div class="container-input">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
-        <%= simple_form_for [@challenge, @message] do |f| %>
+        <%= simple_form_for [@challenge, @message], remote: true do |f| %>
           <%= f.error_notification %>
           <%= f.input :content, label: "" %>
         <% end %>
@@ -36,7 +24,25 @@
   </div>
 </div>
 
+<% content_for :after_js do %>
+  <script>
+    App.messages = App.cable.subscriptions.create('MessagesChannel', {
+      received: function(data) {
+        console.log(data);
+         $("#messages").removeClass('hidden')
+    return $('#messages').append(this.renderMessage(data));
+  },
 
+  renderMessage: function(data) {
+    return "<p> <b>" + data.user + ": </b>" + data.message + "</p>";
+  }
+});
+
+        // récupérer le conteneur des messages
+        // append le dernier message dedans
+
+  </script>
+<% end %>
 
 
 
