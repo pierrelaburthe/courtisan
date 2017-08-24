@@ -17,7 +17,7 @@ function startTimer(duration, display) {
 };
 
 const toggleClass = position => position.classList.toggle("hide");
-const flashClass = position => position.classList.toggle("flash");
+const previousClass = position => position.classList.toggle("previous-color");
 
 
 function startTimerseconds(duration, display) {
@@ -26,7 +26,7 @@ function startTimerseconds(duration, display) {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+        seconds = seconds < 10 ?  seconds : seconds;
         display.textContent = seconds;
         if (--timer < 0) {
             timer = duration;
@@ -38,7 +38,9 @@ const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
 const time_small = document.getElementById("smalltime");
 const message_admin= document.getElementById("msgadmin");
-const container = document.getElementById("container-messenger");
+const container = document.getElementById("container-messages");
+const countdown_text = document.getElementById("countdown-text");
+const gifspace = document.getElementById("gifspace");
 
 // setTimeout(function(){
 // message_big.innerHTML = "Le duel commence!";
@@ -47,22 +49,24 @@ const container = document.getElementById("container-messenger");
 const typebox= document.getElementById("typebox");
 
 
-// setTimeout(function(){
-// // message_big.innerHTML += "Joutez!"
-// // flashClass(container);
-// },3800);
+setTimeout(function(){
+toggleClass(message_big);
+toggleClass(time_big);
+toggleClass(countdown_text);
+toggleClass(gifspace);
+},3000);
+
 
 
 
 setTimeout(function(){
 toggleClass(typebox);
-toggleClass(time_big);
 toggleClass(time_small);
-flashClass(container);
+toggleClass(message_big);
+previousClass(container);
 message_admin.innerHTML = "Commencez à jouter";
 
-
-},4000);
+},3500);
 
 window.onload = function () {
     var count = 2;

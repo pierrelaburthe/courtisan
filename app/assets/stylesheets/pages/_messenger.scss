@@ -5,7 +5,36 @@
     padding-top: 10px;
     height: 100vh;
 }
+// #bigmsg {
+// font-size: 200px;
+// }
+.countdown-text, #bigmsg {
+  font-family: Palanquin;
+font-weight: 100;
+font-size: 40px;
+}
 
+abbr {
+  color:transparent;
+}
+
+.gif-space{
+  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
+  background-size: cover;
+  height: 60vh;
+
+  margin-top:100px;
+}
+
+.previous-color {
+  background: repeating-linear-gradient(
+  45deg,
+  rgb(240,240,240),
+  rgb(240,240,240) 2px,
+  white 2px,
+  white 4px
+)!important;
+}
 .header-messenger{
   text-align: center;
     color: rgb(100,100,100);
@@ -50,10 +79,10 @@ font-size:20px;
     left: 5px;
   }
 
-  #bigtime{
-color: orange;
-font-size: 100px;
-  }
+//   #bigtime{
+// color: orange;
+// font-size: 100px;
+//   }
 
 .container-messages{
 // position: relative;
