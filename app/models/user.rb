@@ -53,6 +53,10 @@ class User < ApplicationRecord
     Challenge.where(seducer2: self.id)
   end
 
+  def sending_messages
+    Message.where()
+  end
+
 
 end
 

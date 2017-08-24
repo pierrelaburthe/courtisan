@@ -10,7 +10,7 @@ before_action :set_challenge
     @message.challenge = @challenge
     @message.user = current_user
     if @message.save
-      redirect_to user_challenge_path(current_user, @challenge)
+      redirect_to challenge_path(@challenge)
     else
       render 'challenges/show'
     end

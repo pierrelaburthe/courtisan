@@ -24,7 +24,7 @@
         <% else %>
           <% current_user.sending_challenges.each do |challenge| %>
             <li>
-              <%= link_to challenge.seduced.first_name, user_challenge_path(current_user, challenge), class: "text-small" %>
+              <%= link_to challenge.seduced.first_name, challenge_path(challenge), class: "text-small" %>
             </li>
           <% end %>
         <% end %>
