@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :profilecompleteduser, only: [:profile, :update]
    # skip_before_action :authenticate_user!, only: :show
  before_action :set_users, only: [:edit]
  # after_create :host_mail_confirmation
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
  end
 
  def profile
+
  end
 
  def edit
