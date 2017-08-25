@@ -105,8 +105,8 @@ setTimeout(function(){
   if (message_admin) {
     message_admin.innerHTML = "Lancez votre dernière joute";
   }
-},20000);
-//70
+},70000);
+
 setTimeout(function(){
     previousClass(container);
     toggleClass(typebox);
@@ -116,8 +116,8 @@ setTimeout(function(){
     message_admin.innerHTML = "Préparez vous pour le round 2...";
   }
 
-},25000);
-//92
+},92000);
+
 
 
 // window.onload = function () {
