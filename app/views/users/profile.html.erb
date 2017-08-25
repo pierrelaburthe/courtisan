@@ -24,5 +24,12 @@
           </div>
       </div>
     </div>
+    <% current_user.profilecompleted? %>
+               <p> Nombre de victoires: <%= current_user.victories%>
+               <br>
+                Nombre de défaites:<%= current_user.defeats%>
+                </p>
   </div>
+
+
 
