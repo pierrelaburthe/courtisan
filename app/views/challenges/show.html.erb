@@ -18,12 +18,15 @@
 
 
     <div class="row">
-      <% @challenge.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
-      <% end %>
+
+      <div id="messages">
+        <% @challenge.messages.each do |message| %>
+          <%= render "messages/message", message: message %>
+        <% end %>
+      </div>
     </div>
   </div>
-    
+
   <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
@@ -38,24 +41,29 @@
 
 <% content_for :after_js do %>
   <script>
-    App.messages = App.cable.subscriptions.create('MessagesChannel', {
-      received: function(data) {
-        console.log(data);
-         $("#messages").removeClass('hidden')
-    return $('#messages').append(this.renderMessage(data));
-  },
 
-  renderMessage: function(data) {
-    return "<p> <b>" + data.user + ": </b>" + data.message + "</p>";
-  }
-});
+  // App.messages = App.cable.subscriptions.create('MessagesChannel', {
+  //     received: function(data) {
+  //     messageConteneur = document.getElementById("message-content-me")
+  // }});
 
+  //         console.log(data);
+
+  App.messages = App.cable.subscriptions.create('MessagesChannel', {
+    received: function(data) {
+      $("#messages").removeClass('hidden')
+      return $('#messages').append(this.renderMessage(data));
+    },
+
+    renderMessage: function(data) {
+      return "<p>" + data.message + "</p>";
+    }
+  });
         // récupérer le conteneur des messages
         // append le dernier message dedans
 
   </script>
 <% end %>
-
 
 
 
