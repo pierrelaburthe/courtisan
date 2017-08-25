@@ -23,6 +23,13 @@
   }
 }
 
+.gif-space{
+  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
+  background-size: cover;
+  height: 60vh;
+  margin-top:100px;
+}
+
 #cardtime{
 width:40px;
 height:40px;
@@ -33,5 +40,14 @@ border-radius: 50%;
 border-style: solid;
 border-width:1px;
 font-size:23px;
+}
 
+.previous-color{
+  background: repeating-linear-gradient(
+  45deg,
+  rgb(240,240,240),
+  rgb(240,240,240) 2px,
+  white 2px,
+  white 4px
+)!important;
 }

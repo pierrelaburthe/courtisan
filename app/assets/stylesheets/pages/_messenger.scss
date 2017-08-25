@@ -5,47 +5,22 @@
   height: 100vh;
 }
 
-abbr {
-  color:transparent;
-}
-
-.gif-space{
-  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
-  background-size: cover;
-  height: 60vh;
-  margin-top:100px;
-}
-
-.previous-color {
-  background: repeating-linear-gradient(
-  45deg,
-  rgb(240,240,240),
-  rgb(240,240,240) 2px,
-  white 2px,
-  white 4px
-)!important;
-}
-
-
 .header-messenger{
   text-align: center;
   color: rgb(100,100,100);
-// color: black;
-margin:0px;
-position: relative;
-
-h2{
+  margin:0px;
+  position: relative;
+  h2{
   font-size: 25px;
-margin:10px;
-padding:5px;
-border-bottom-style: solid;
-border-bottom-width: 1px;
-border-bottom-color: rgb(200,200,200);
+  margin:10px;
+  padding:5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(200,200,200);
+  }
 }
 
-}
-
-.avatar-time {
+.avatar-time{
   border-style: solid;
   border-width: 1px;
   border-radius: 50px;
@@ -58,18 +33,18 @@ border-bottom-color: rgb(200,200,200);
 }
 
 .text-right{
-    margin-left: 80vh;
+  margin-left: 80vh;
 }
 
 .text-left{
-    margin-right: 80vh;
+  margin-right: 80vh;
 }
 
 .message-content-admin{
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    font-size:25px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size:25px;
   }
 
 .container-messages{
@@ -81,13 +56,12 @@ border-bottom-color: rgb(200,200,200);
   height: 85vh;
   background-color: white;
   border-radius: 5px;
-.body-container-messages{
-  height: 75vh;
-  overflow: auto;
-  text-align: center;
+  .body-container-messages{
+    height: 75vh;
+    overflow: auto;
+    text-align: center;
     position: relative;
-}
-
+  }
 }
 
 .message-content-me, .message-content-rival, .message-content-admin {
@@ -99,18 +73,19 @@ border-bottom-color: rgb(200,200,200);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
   border-radius: 40px;
   padding: 8px;
+  text-align:left;
 }
 .message-content-me{
   color: white;
   background-color: #0084FF;
-  padding-right: 25px;
+  padding-left: 25px;
   margin-left: 15px;
 }
 
-.message-content-rival {
+.message-content-rival{
   color: black;
   background-color: #e2e0e0;
-  padding-right: 25px;
+  padding-left: 25px;
   margin-left: 35px;
 }
 
@@ -129,6 +104,10 @@ border-bottom-color: rgb(200,200,200);
 }
 
 .message-footer-rival{
-    margin-left: 50px;
-text-align: left;
+  margin-left: 50px;
+  text-align: left;
+}
+
+abbr {
+  color:transparent;
 }
