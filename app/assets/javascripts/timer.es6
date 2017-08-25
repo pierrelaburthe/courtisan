@@ -94,7 +94,7 @@ toggleClass(card_seduced);
   }
 
 
-},10000);
+// },10000);
 
 
 // window.onload = function () {
