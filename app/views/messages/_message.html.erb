@@ -1,6 +1,6 @@
-<div class="col-md-6 col-md-offset-6" >
+<div class="<%= message.user == current_user ? "col-md-6 col-md-offset-6" : "col-md-6" %>" >
   <div class="message-body ">
-    <div class="<%= message.user == current_user ? "message-content-me" : "" %>">
+    <div class="<%= message.user == current_user ? "message-content-me" : "message-content-rival" %>">
       <%= message.content %>
     </div>
     <div class="message-footer">
