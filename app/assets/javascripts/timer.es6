@@ -25,6 +25,12 @@ const previousClass = (position) => {
     position.classList.toggle("previous-color");
   }
 };
+const redClass = (position) => {
+  if (position) {
+    position.classList.toggle("red");
+  }
+};
+
 
 
 function startTimerseconds(duration, display) {
@@ -56,7 +62,6 @@ const countdownText = document.getElementById('countdown-text');
 const timecard = document.getElementById('cardtime');
 
 
-
 setTimeout(function(){
   toggleClass(countdownText);
     toggleClass(message_big);
@@ -65,7 +70,7 @@ setTimeout(function(){
 
 setTimeout(function(){
   toggleClass(typebox);
-      toggleClass(message_big);
+  toggleClass(message_big);
 
   toggleClass(gif);
   // toggleClass(countdownText);
@@ -93,6 +98,26 @@ toggleClass(card_seduced);
     message_admin.innerHTML = "Provoquez votre adversaire";
   }
 },10000);
+
+
+setTimeout(function(){
+  redClass(time_small);
+  if (message_admin) {
+    message_admin.innerHTML = "Lancez votre dernière joute";
+  }
+},20000);
+//70
+setTimeout(function(){
+    previousClass(container);
+    toggleClass(typebox);
+     toggleClass(time_small);
+
+  if (message_admin) {
+    message_admin.innerHTML = "Préparez vous pour le round 2...";
+  }
+
+},25000);
+//92
 
 
 // window.onload = function () {
