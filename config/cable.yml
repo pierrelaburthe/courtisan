@@ -6,5 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:2688fd8857a759e31e0bb3c0d2d1e356@jack.redistogo.com:11115/
   channel_prefix: courtisan_production
+
