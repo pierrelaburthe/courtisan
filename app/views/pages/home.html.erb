@@ -26,7 +26,7 @@
             <%= f.hidden_field :seducer2_id, value: User.last.id %>
             <%= f.hidden_field :seduced_id, value: User.where(gender: "Femme").sample.id  %>
             <%= f.hidden_field :current_round, value: 0 %>
-            <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active" %>
+            <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active jouer"%>
           <% end %>
         </div>
 
