@@ -1,4 +1,4 @@
-<div class="<%= message.user == current_user ? "col-md-6 col-md-offset-6" : "col-md-6" %>" >
+<div class="<%= message.user == current_user ? "" : "" %>" >
   <div class="message-body">
     <div class="<%= message.user == current_user ? "message-content-me" : "message-content-rival" %>">
       <%= message.content %>
