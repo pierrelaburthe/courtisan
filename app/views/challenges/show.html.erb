@@ -46,26 +46,23 @@
 
 <% content_for :after_js do %>
   <script>
-
-  // App.messages = App.cable.subscriptions.create('MessagesChannel', {
-  //     received: function(data) {
-  //     messageConteneur = document.getElementById("message-content-me")
-  // }});
-
-  //         console.log(data);
-
   App.messages = App.cable.subscriptions.create('MessagesChannel', {
     received: function(data) {
-      $("#messages").removeClass('hidden')
-      return $('#messages').append(this.renderMessage(data));
+      $("#messages").removeClass('hidden');
+      $('#messages').append(this.renderMessage(data));
+      scroll_bottom();
+      $('#message_content').val('');
     },
 
     renderMessage: function(data) {
       return "<p>" + data.message + "</p>";
+      scroll_bottom();
     }
   });
-        // récupérer le conteneur des messages
-        // append le dernier message dedans
+
+  var scroll_bottom = function() {
+    $('#messages').scrollTop($('#messages')[0].scrollHeight + 10);
+  };
 
   </script>
 <% end %>
