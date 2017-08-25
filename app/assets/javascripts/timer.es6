@@ -20,9 +20,9 @@ const toggleClass = (position) => {
     position.classList.toggle("hide");
   }
 };
-const flashClass = (position) => {
+const previousClass = (position) => {
   if (position) {
-    position.classList.toggle("flash");
+    position.classList.toggle("previous-color");
   }
 };
 
@@ -48,42 +48,54 @@ const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
 const time_small = document.getElementById("smalltime");
 const message_admin= document.getElementById("msgadmin");
-const container = document.getElementById("container-messenger");
-
-// setTimeout(function(){
-// message_big.innerHTML = "Le duel commence!";
-// },3000);
-
+const container = document.getElementById("container-messages");
+const card_seduced = document.getElementById("card-seduced");
 const typebox= document.getElementById("typebox");
 const gif = document.getElementById('gifspace');
 const countdownText = document.getElementById('countdown-text');
-
-
-// setTimeout(function(){
-// // message_big.innerHTML += "Joutez!"
-// // flashClass(container);
-// },3800);
+const timecard = document.getElementById('cardtime');
 
 
 
 setTimeout(function(){
-  toggleClass(typebox);
-  toggleClass(time_big);
-  toggleClass(time_small);
-  toggleClass(gif);
   toggleClass(countdownText);
-  flashClass(container);
+    toggleClass(message_big);
+},3000);
+
+
+setTimeout(function(){
+  toggleClass(typebox);
+      toggleClass(message_big);
+
+  toggleClass(gif);
+  // toggleClass(countdownText);
+  previousClass(container);
   if (message_admin) {
-    message_admin.innerHTML = "Commencez à jouter";
+    message_admin.innerHTML = "La carte va bientôt disparaître...";
   }
 },4000);
+
 
 window.onload = function () {
     var count = 2;
     var one_round = 93;
+    var card_count = 9;
     startTimerseconds(count, time_big);
     startTimer(one_round, time_small);
+    startTimerseconds(card_count, timecard);
 };
+
+
+setTimeout(function(){
+toggleClass(card_seduced);
+ toggleClass(time_small);
+  if (message_admin) {
+    message_admin.innerHTML = "Provoquez votre adversaire";
+  }
+
+
+},10000);
+
 
 // window.onload = function () {
 //     var one_round = 90;

@@ -23,6 +23,18 @@
     <div class = "gif-space" id = "gifspace"></div>
 
     <div class="row">
+    <div class="card-seduced" id = "card-seduced">
+    <div id ="cardtime">  </div>
+        <p> <span class = "generated_text"> Votre douce s'appelle </span><br/>
+    <strong> <%=  @challenge.seduced.first_name %></p> </strong>
+     <p> <span class = "generated_text"> Elle est</span> <br/>
+    <strong> <%=  @challenge.seduced.i_am %> </p> </strong>
+    <p> <span class = "generated_text"> Elle aime</span><br/>
+    <strong> <%=  @challenge.seduced.i_like %> </p> </strong>
+    <p> <span class = "generated_text"> Elle recherche</span><br/>
+    <strong> <%=  @challenge.seduced.i_look_for %> </span></p> </strong>
+  </div>
+
 
       <div id="messages">
         <% @challenge.messages.each do |message| %>
