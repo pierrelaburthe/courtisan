@@ -92,9 +92,7 @@ toggleClass(card_seduced);
   if (message_admin) {
     message_admin.innerHTML = "Provoquez votre adversaire";
   }
-
-
-// },10000);
+},10000);
 
 
 // window.onload = function () {
