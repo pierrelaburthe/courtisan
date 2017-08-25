@@ -36,7 +36,7 @@ function startTimerseconds(duration, display) {
       minutes = parseInt(timer / 60, 10)
       seconds = parseInt(timer % 60, 10);
       minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+      seconds = seconds < 10 ? seconds : seconds;
       display.textContent = seconds;
       if (--timer < 0) {
           timer = duration;
@@ -55,6 +55,8 @@ const container = document.getElementById("container-messenger");
 // },3000);
 
 const typebox= document.getElementById("typebox");
+const gif = document.getElementById('gifspace');
+const countdownText = document.getElementById('countdown-text');
 
 
 // setTimeout(function(){
@@ -68,6 +70,8 @@ setTimeout(function(){
   toggleClass(typebox);
   toggleClass(time_big);
   toggleClass(time_small);
+  toggleClass(gif);
+  toggleClass(countdownText);
   flashClass(container);
   if (message_admin) {
     message_admin.innerHTML = "Commencez à jouter";
@@ -80,6 +84,18 @@ window.onload = function () {
     startTimerseconds(count, time_big);
     startTimer(one_round, time_small);
 };
+
+// window.onload = function () {
+//     var one_round = 90;
+//     startTimer(one_round, time_small);
+// };
+
+
+
+// setTimeout(function(){
+// message_admin.innerHTML = "shalom";
+
+// },5000);
 
 // window.onload = function () {
 //     var one_round = 90;
