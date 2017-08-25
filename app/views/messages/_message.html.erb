@@ -1,4 +1,4 @@
-<div class="<%= message.user == current_user ? "" : "" %>" >
+<div class="<%= message.user == current_user ? "text-right" : "text-left" %>" >
   <div class="message-body">
     <div class="<%= message.user == current_user ? "message-content-me" : "message-content-rival" %>">
       <%= message.content %>

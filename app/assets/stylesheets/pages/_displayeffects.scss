@@ -1,0 +1,37 @@
+.countdown-text, #bigmsg {
+  font-family: Palanquin;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.red{
+  background-color: red;
+  color: white;
+}
+.card-seduced {
+  font-family: Palanquin;
+  position: relative;
+  width: 250px;
+  margin-left:45vh;
+  background-color: rgb(240,240,240);
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+  .generated_text{
+    font-weight: 100;
+  }
+}
+
+#cardtime{
+width:40px;
+height:40px;
+position: absolute;
+top: 5px;
+right:5px;
+border-radius: 50%;
+border-style: solid;
+border-width:1px;
+font-size:23px;
+
+}
