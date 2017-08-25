@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
     @message.user = current_user
     if @message.save
       ActionCable.server.broadcast 'messages',
-        message: render(partial: "messages/message", locals: { message: @message })
+        challenge_id: @challenge.id, user_id: current_user.id
       head :ok
       # redirect_to challenge_path(@challenge)
     else
