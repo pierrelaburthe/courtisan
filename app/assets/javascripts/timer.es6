@@ -15,6 +15,28 @@ function startTimer(duration, display) {
   }, 1000);
 };
 
+
+ var  intervalTimer = "0"
+function startTimerseconds(duration, display) {
+  if (display === null) {
+    return;
+  }
+  var timer = duration, minutes, seconds;
+      intervalTimer  = setInterval(function () {
+      minutes = parseInt(timer / 60, 10)
+      seconds = parseInt(timer % 60, 10);
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? seconds : seconds;
+      display.textContent = seconds;
+      console.log("this is seconds" + seconds);
+      if (--timer < 0) {
+          timer = duration;
+      }
+  }, 1000);
+
+};
+
+
 const toggleClass = (position) => {
   if (position) {
     position.classList.toggle("hide");
@@ -32,30 +54,6 @@ const redClass = (position) => {
 };
 
 
- var stuff = "0"
-function startTimerseconds(duration, display) {
-  if (display === null) {
-    return;
-  }
-  var timer = duration, minutes, seconds;
-      stuff = setInterval(function () {
-      minutes = parseInt(timer / 60, 10)
-      seconds = parseInt(timer % 60, 10);
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? seconds : seconds;
-      display.textContent = seconds;
-      console.log("this is seconds" + seconds);
-      if (--timer < 0) {
-          timer = duration;
-      }
-
-  }, 1000);
-
-
-
-
-
-};
 
 const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
@@ -72,26 +70,26 @@ const encours = document.getElementById('encours');
 
 
 setTimeout(function(){
-
-
-  console.log("this is stuff" + stuff);
-  clearInterval(stuff);
-  // toggleClass(countdownText);
-  //   toggleClass(message_big);
+  toggleClass(countdownText);
+    toggleClass(message_big);
 },3000);
 
-// setTimeout(function(){
-//   toggleClass(typebox);
-//   toggleClass(message_big);
-// toggleClass(title);
-//   toggleClass(gif);
+setTimeout(function(){
+  toggleClass(typebox);
+  toggleClass(message_big);
+toggleClass(title);
+  toggleClass(gif);
+  previousClass(container);
+        clearInterval(intervalTimer);
 
-//   previousClass(container);
+        // window.onload = function () {
+    var one_round = 89;
+    var card_count = 9;
+    startTimer(one_round, time_small);
+    startTimerseconds(card_count, timecard);
+// };
 
-
-//
-
-// },4000);
+},4000);
 
 
 window.onload = function () {
@@ -122,28 +120,29 @@ window.onload = function () {
 //   }
 // },74000);
 
-// setTimeout(function(){
-//     previousClass(container);
-//     toggleClass(typebox);
-//      toggleClass(time_small);
-//  toggleClass(title);
-//   toggleClass(countdownText);
-//     encours.innerHTML = "round 2";
-// },14000);
+setTimeout(function(){
+
+    previousClass(container);
+    toggleClass(typebox);
+     toggleClass(time_small);
+ toggleClass(title);
+  toggleClass(countdownText);
+    encours.innerHTML = "round 2";
+},14000);
 
 
 setTimeout(function(){
 
 
 
-window.onload = function () {
-    var count_2 = 5;
-    var one_round = 93;
-    var card_count = 13;
-    startTimerseconds(count_2, time_big);
-    startTimer(one_round, time_small);
-    startTimerseconds(card_count, timecard);
-};
+// window.onload = function () {
+//     var count_2 = 5;
+//     var one_round = 93;
+//     var card_count = 13;
+//     startTimerseconds(count_2, time_big);
+//     startTimer(one_round, time_small);
+//     startTimerseconds(card_count, timecard);
+// };
 
 },15000);
 
