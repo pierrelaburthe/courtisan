@@ -1,5 +1,5 @@
 puts 'destroying classes'
-classes = [User, Challenge, Message]
+classes = [Challenge, Message, WaitingList, User]
 classes.each do |c|
   c.destroy_all
 end

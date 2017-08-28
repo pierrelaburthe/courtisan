@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   get 'challenges/wait'
   get 'users/profile'
 
+  resources :waiting_lists, only: [:create]
+
+  get 'waiting_lists/join'
+
+  get 'pages/wait'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

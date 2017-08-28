@@ -4,5 +4,10 @@ class PagesController < ApplicationController
 
   def home
     @challenge = Challenge.new
+    @waiting_list = WaitingList.new
+  end
+
+  def wait
+
   end
 end

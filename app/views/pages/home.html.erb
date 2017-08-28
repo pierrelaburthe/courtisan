@@ -20,14 +20,20 @@
             <% end %>
           <% end %>
 
+          <% if WaitingList.all.blank? %>
 
+            <%= form_for @waiting_list do |f| %>
+              <%= f.hidden_field :seduced_id, value: User.where(gender: "Femme").sample.id  %>
+              <%= f.hidden_field :seducer1_id, value: current_user.id %>
+              <%= f.submit "Jouer", class: "btn-red-custom btn-lg active jouer"%>
+            <% end %>
 
-          <%= form_for @challenge do |f| %>
-            <%= f.hidden_field :seducer2_id, value: User.last.id %>
-            <%= f.hidden_field :seduced_id, value: User.where(gender: "Femme").sample.id  %>
-            <%= f.hidden_field :current_round, value: 0 %>
-            <%= f.submit "Jouer",  class: "btn-red-custom btn-lg active jouer"%>
+          <% else %>
+
+            <%= link_to "Jouer", waiting_lists_join_path, class: "btn-red-custom btn-lg active jouer" %>
+
           <% end %>
+
         </div>
 
       <% else %>
