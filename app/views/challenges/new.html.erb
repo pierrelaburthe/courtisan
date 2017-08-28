@@ -5,25 +5,30 @@
 
 
       <div class="banner-content">
-        <% if current_user.status == "courtiser" %>
-          <% if current_user.gender == "Homme" %>
+        <% if current_user.gender == "Homme"%>
+
+          <% if current_user.status == "Courtiser" %>
             <h3><strong>Vous êtes courtisan</strong></h3>
+          <% else %>
+            <h3><strong>Vous êtes courtisé</strong></h3>
+          <% end %>
+
+        <% else %>
+
+          <% if current_user.status == "Courtiser" %>
+            <h3><strong>Vous êtes courtisane</strong></h3>
+          <% else %>
+            <h3><strong>Vous êtes courtisée</strong></h3>
+          <% end %>
+
+        <% end %>
             <div class="rules" style = "
 text-decoration-color:red;color:red;text-align: left;">
             <p class ="banner-message quotes">Round 1: Présente toi</p>
             <p class ="banner-message quotes">Round 2: Satisfait la curiosité de ta douce</p>
             <p class ="banner-message quotes">Round 3: Démarque toi</p>
             </div>
-          <% else %>
-            <h3>Vous êtes courtisane</h3>
-          <% end %>
-        <% else %>
-          <% if current_user.gender == "Homme" %>
-            <h3>Vous êtes courtisé</h3>
-          <% else %>
-            <h3>Vous êtes courtisée</h3>
-          <% end %>
-        <% end %>
+
 
         <% if user_signed_in? %>
           <%= link_to "lancer un duel", new_challenge_path, class: "btn-red-custom btn-lg active" %>
