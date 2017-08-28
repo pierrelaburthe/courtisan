@@ -8,12 +8,14 @@
   background-color: red;
   color: white;
 }
-.card-seduced {
+.card-seduced, .card-question {
   font-family: Palanquin;
   position: relative;
   width: 250px;
-  margin-left:45vh;
-  background-color: rgb(240,240,240);
+  margin-left:60vh;
+  // background-color: rgb(240,240,240);
+  background-color: rgb(70,70,70);
+  color: white;
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -23,14 +25,30 @@
   }
 }
 
-.gif-space{
-  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
-  background-size: cover;
-  height: 60vh;
-  margin-top:100px;
+.logo_small {
+  width:50px;
+  height:30px;
 }
 
-#cardtime{
+.gif-space, .gif-space2{
+  background-size: cover;
+  height: 62vh;
+
+}
+
+.gif-space{
+    margin-top:100px;
+  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
+}
+
+.gif-space2{
+background-image: url("https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif");
+    margin-top: 40px;
+    background-position: center;
+
+}
+
+#cardtime, #cardtimeq{
 width:40px;
 height:40px;
 position: absolute;

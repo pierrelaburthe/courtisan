@@ -11,6 +11,8 @@
   margin:0px;
   position: relative;
   h2{
+    letter-spacing: 0.3px;
+    color: black;
   font-size: 25px;
   margin:10px;
   padding:5px;
@@ -33,7 +35,7 @@
 }
 
 .text-right{
-  margin-left: 80vh;
+  margin-left: 110vh;
 }
 
 .text-left{
@@ -48,7 +50,7 @@
   }
 
 .container-messages{
-  margin-left:100px;
+  margin-left:60px;
   margin-top: 0px;
   width: 160vh;
   padding: 10px;
@@ -64,11 +66,11 @@
   }
 }
 
-.message-content-me, .message-content-rival, .message-content-admin {
+.message-content-me, .message-content-rival, .message-content-admin, .message-content-seduced {
   font-family: Palanquin;
   font-weight: 100;
 }
-.message-content-me, .message-content-rival {
+.message-content-me, .message-content-rival, .message-content-seduced  {
   width: 40vh;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
   border-radius: 40px;
@@ -82,6 +84,13 @@
   margin-left: 15px;
 }
 
+.message-content-seduced {
+  color: white;
+  background-color: #E20049;
+    margin-left: 60vh;
+    text-align:center;
+margin-top:20px;
+}
 .message-content-rival{
   color: black;
   background-color: #e2e0e0;
@@ -90,13 +99,22 @@
 }
 
 .message-content-admin{
-  color: rgb(150,150,150);
+  // color: rgb(150,150,150);
+// color: #28CC9E;
+color: #750800;
+font-weight: bolder;
+font-size: 20px;
 }
 
-.message-footer, .message-footer-rival{
+.message-footer, .message-footer-rival, .message-footer-seduced{
   font-size: 15px;
   color: rgb(200,200,200);
 }
+
+.message-footer{
+  text-align: center;
+}
+
 
 .message-footer{
   margin-right: 50px;
