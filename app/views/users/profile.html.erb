@@ -4,7 +4,7 @@
     Tu y es presque ! Prépare tes meilleurs punchlines, la compétition est rude.
     </div>
   </div>
-  <div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(<%= image_path 'carnaval.jpg'%>);">
+  <div class="banner-home-profile" id="profileedit" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(<%= image_path 'carnaval.jpg'%>);">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-offset-4 col-md-4">
@@ -12,23 +12,23 @@
             <%= f.error_notification %>
 
             <div class="form-inputs">
-              <%= f.input :gender, required: true, collection: User::GENDER, label: "Sexe" %>
+              <%= f.input :gender, required: true, collection: User::GENDER, label: "Sexe", prompt: "Sexe" %>
               <%= f.input :age, required: true, label: "Âge" %>
               <%= f.input :i_am, required: true, label: "Je suis", placeholder: 'Musicien, sportif et écrivain' %>
               <%= f.input :i_like, required: true, label: "J'aime", placeholder: 'Rire, rêver et partager' %>
               <%= f.input :i_look_for, required: true, label: "Je recherche" , placeholder: 'Une aventure passionnée' %>
-              <%= f.input :status, required: true, collection: User::CHOIX, label: "Mon rôle préféré" %>
+              <%= f.input :status, required: true, collection: User::CHOIX, label: "Mon rôle préféré", prompt: "Mode de jeu" %>
               <%= f.button :submit, "Démarrer l'aventure", class: "btn-red-custom"  %>
+              <% current_user.profilecompleted? %>
+               <p> Nombre de victoires: <%= current_user.victories%>
+               <br>
+                Nombre de défaites:<%= current_user.defeats%>
+                </p>
               <% end %>
              </div>
           </div>
       </div>
     </div>
-    <% current_user.profilecompleted? %>
-               <p> Nombre de victoires: <%= current_user.victories%>
-               <br>
-                Nombre de défaites:<%= current_user.defeats%>
-                </p>
   </div>
 
 
