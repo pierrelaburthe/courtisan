@@ -67,6 +67,10 @@ const gif2 = document.getElementById('gifspace2');
 const card_question = document.getElementById("card-question");
 const timecardq = document.getElementById('cardtimeq');
 const msgseduced = document.getElementById('msgseduced');
+const msgseducedcontent = document.getElementById('msgseducedcontent');
+const gif3 = document.getElementById('gifspace3');
+const card_rival = document.getElementById('card-rival');
+const timecardr = document.getElementById('cardtimer');
 
 
 window.onload = function () {
@@ -173,19 +177,56 @@ toggleClass(card_question);
       startTimer(one_round, time_small);
 },108000);
 
-
 setTimeout(function(){
-    toggleClass(message_admin);
-  redClass(time_small);
-},111000);
-
-
-setTimeout(function(){
-  msgseduced.innerHTML= "J'espère que la question vous inspire..."
+  msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
   toggleClass(msgseduced);
 },122000);
 
 
+setTimeout(function(){
+    toggleClass(message_admin);
+  redClass(time_small);
+},167000);
+
+setTimeout(function(){
+    toggleClass(message_admin);
+      toggleClass(msgseduced);
+      redClass(time_small);
+    previousClass(container);
+    toggleClass(typebox);
+     toggleClass(time_small);
+ toggleClass(title);
+  toggleClass(countdownText);
+   time_big.innerHTML ="3";
+     toggleClass(gif3);
+    encours.innerHTML = "round 3";
+        clearInterval(intervalTimerseconds);
+        var count = 2;
+    startTimerseconds(count, time_big);
+},187000);
+//187
+
+setTimeout(function(){
+      toggleClass(countdownText);
+  toggleClass(message_big);
+},190000);
+//190
+
+setTimeout(function(){
+  toggleClass(typebox);
+  toggleClass(message_big);
+
+  title.innerHTML = "Troisième manche. Provoquez votre rival."
+toggleClass(title);
+  toggleClass(gif3);
+  previousClass(container);
+        clearInterval(intervalTimerseconds);
+    var card_count = 9;
+    startTimerseconds(card_count, timecardr);
+    toggleClass(card_question);
+    toggleClass(card_rival);
+},191000);
+//191
 
 // window.onload = function () {
 //     var one_round = 90;

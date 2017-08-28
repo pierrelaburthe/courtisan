@@ -13,6 +13,7 @@
   <span class = "hide" id = "bigmsg"> Joutez! </span>
   <div class = "gif-space" id = "gifspace"></div>
     <div class = "gif-space2 hide" id = "gifspace2"></div>
+    <div class = "gif-space3 hide" id = "gifspace3"></div>
 
 
 
@@ -39,9 +40,26 @@
 
   </div>
 
+      <div class="card-rival hide" id = "card-rival">
+    <div id ="cardtimer"> 10</div>
+    <%= image_tag "logo.png", class: "logo_small" %>
+        <p> <span class = "generated_text"> Votre rival s'appelle </span><br/>
+    <strong> <%=  @challenge.seducer2.first_name %>  </strong></p>
+     <p> <span class = "generated_text"> Il est</span> <br/>
+    <strong> <%=  @challenge.seducer2.i_am %> </strong></p>
+    <p> <span class = "generated_text"> Il aime</span><br/>
+    <strong> <%=  @challenge.seducer2.i_like %>  </strong></p>
+    <p> <span class = "generated_text"> Il recherche</span><br/>
+    <strong> <%=  @challenge.seducer2.i_look_for %> </span></strong></p>
+  </div>
+
+
+
+
+
 
 <div class="msg-seduced hide" id= "msgseduced">
-    <div class="message-content-seduced" id= "msgseduced">Bonne chance mes courtisans ;)
+    <div class="message-content-seduced" id= "msgseducedcontent">Bonne chance mes courtisans ;)
     </div>
     <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
 </div>

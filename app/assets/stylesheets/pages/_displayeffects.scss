@@ -8,7 +8,7 @@
   background-color: red;
   color: white;
 }
-.card-seduced, .card-question {
+.card-seduced, .card-question, .card-rival {
   font-family: Palanquin;
   position: relative;
   width: 250px;
@@ -30,7 +30,7 @@
   height:30px;
 }
 
-.gif-space, .gif-space2{
+.gif-space, .gif-space2, .gif-space3{
   background-size: cover;
   height: 62vh;
 
@@ -46,6 +46,11 @@ background-image: url("https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif");
     margin-top: 40px;
     background-position: center;
 
+}
+.gif-space3{
+  background-image: url("https://media.giphy.com/media/l41lKvLqu2xcYX8ly/giphy.gif");
+  margin-top: 40px;
+  background-position: center;
 }
 
 #cardtime, #cardtimeq{
