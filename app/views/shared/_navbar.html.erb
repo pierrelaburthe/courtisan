@@ -23,7 +23,7 @@
         </button>
         <ul class="dropdown-menu navbar-wagon-dropdown-menu">
         <% if current_user.sending_challenges.blank? %>
-          <%= link_to "Vous n'avez pas encore de discussion" %>
+          <%= link_to "Vous n'avez pas encore de discussion", id: "design-dropdown"%>
         <% else %>
           <% current_user.sending_challenges.each do |challenge| %>
             <li>

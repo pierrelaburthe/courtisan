@@ -29,3 +29,38 @@
   align-items: center;
   height: 100vh;
 }
+
+.radio {
+  margin : 20px;
+  border: solid;
+  color : white;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.radio:hover {
+  opacity: 1;
+  background: #DB1D1D;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.radio.active {
+  background-color: #b7b7b7;
+}
+
+
+.radio_buttons {
+  padding: 8px;
+  .required {
+    display: none;
+  }
+}
+
+
+.form-inline .radio, .form-inline .checkbox {
+  margin-bottom: 23px;
+}
+
