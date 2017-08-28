@@ -6,17 +6,17 @@
 
 
         <div class="banner-content">
-          <% if current_user.status == "courtiser" %>
+          <% if current_user.status == "Courtiser" %>
             <% if current_user.gender == "Homme" %>
-              <h1 class ="banner-message" >Vous êtes courtisan</h3>
+              <h1 class ="banner-message" >Vous êtes courtisan</h1>
             <% else %>
-              <h1 class ="banner-message">Vous êtes courtisane</h3>
+              <h1 class ="banner-message">Vous êtes courtisane</h1>
             <% end %>
           <% else %>
             <% if current_user.gender == "Homme" %>
-              <h1 class ="banner-message">Vous êtes courtisé</h3>
+              <h1 class ="banner-message">Vous êtes courtisé</h1>
             <% else %>
-              <h1 class ="banner-message">Vous êtes courtisée</h3>
+              <h1 class ="banner-message">Vous êtes courtisée</h1>
             <% end %>
           <% end %>
 
