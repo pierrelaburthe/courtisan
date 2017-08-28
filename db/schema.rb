@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823125340) do
+ActiveRecord::Schema.define(version: 20170828103929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,10 +73,25 @@ ActiveRecord::Schema.define(version: 20170823125340) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "waiting_lists", force: :cascade do |t|
+    t.bigint "seduced_id"
+    t.bigint "seducer1_id"
+    t.bigint "seducer2_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "challenge_ready"
+    t.index ["seduced_id"], name: "index_waiting_lists_on_seduced_id"
+    t.index ["seducer1_id"], name: "index_waiting_lists_on_seducer1_id"
+    t.index ["seducer2_id"], name: "index_waiting_lists_on_seducer2_id"
+  end
+
   add_foreign_key "challenges", "users", column: "seduced_id"
   add_foreign_key "challenges", "users", column: "seducer1_id"
   add_foreign_key "challenges", "users", column: "seducer2_id"
   add_foreign_key "challenges", "users", column: "winner_id"
   add_foreign_key "messages", "challenges"
   add_foreign_key "messages", "users"
+  add_foreign_key "waiting_lists", "users", column: "seduced_id"
+  add_foreign_key "waiting_lists", "users", column: "seducer1_id"
+  add_foreign_key "waiting_lists", "users", column: "seducer2_id"
 end
