@@ -61,6 +61,29 @@ p{
 
 }
 
+.banner-waiting {
+  background-size: cover;
+  background-position:center center;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+}
+
+
+.banner-message-waiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-top:40px;
+  font-weight:lighter;
+  color: white;
+
+}
+
 .banner-home p {
   font-size: 25px;
   font-weight: lighter;
@@ -68,6 +91,7 @@ p{
   opacity: 0.6;
   margin-bottom: 30px;
 }
+
 
 .banner-message{
   font-size: 50px;
