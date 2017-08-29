@@ -78,7 +78,7 @@ const gif3 = document.getElementById('gifspace3');
 const card_rival = document.getElementById('card-rival');
 const timecardr = document.getElementById('cardtimer');
 const avatar_seduced = document.getElementById('f1_card');
-const container_avatar_seduced = document.getElementById('f1_container');
+const wrapper_avatar_seduced = document.getElementById('wrapper-avatar-seduced');
 
 window.onload = function () {
     var count = 2;
@@ -116,15 +116,15 @@ setTimeout(function(){
 
   toggleClass(msgseduced);
 
-},15000);
+},22000);
 //22000
 
 
 setTimeout(function(){
   toggleClass(message_admin);
   redClass(time_small);
-},17000);
-//74
+},74000);
+
 
 
 setTimeout(function(){
@@ -142,15 +142,15 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},18000);
+},94000);
 //94
 
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},21000);
-//97
+},97000);
+
 
 setTimeout(function(){
   toggleClass(typebox);
@@ -166,7 +166,7 @@ toggleClass(title);
     toggleClass(card_question);
 // };
 
-},22000);
+},98000);
 //98
 
       setTimeout(function(){
@@ -176,30 +176,28 @@ toggleClass(card_question);
     clearInterval(intervalTimerminutes);
     var one_round = 79;
       startTimer(one_round, time_small);
-},32000);
-      //108
-setTimeout(function(){
-  message_admin.innerHTML = "Votre rival à la préférence..."
-    toggleClass(message_admin);
-},32000);
-
-setTimeout(function(){
-    toggleClass(message_admin);
-},33000);
+},108000);
 
 setTimeout(function(){
   msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
   toggleClass(msgseduced);
-},33000);
-//122
+},128000);
+
+  setTimeout(function(){
+  message_admin.innerHTML = "Votre rival à la préférence..."
+    toggleClass(message_admin);
+},148000);
 
 setTimeout(function(){
+    toggleClass(message_admin);
+},153000);
 
+
+setTimeout(function(){
   message_admin.innerHTML = "Lancez votre dernière joute!"
     toggleClass(message_admin);
   redClass(time_small);
-},34000);
-//167
+},168000);
 
 setTimeout(function(){
     toggleClass(message_admin);
@@ -216,14 +214,12 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},35000);
-//187
+},188000);
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},38000);
-//190
+},191000);
 
 setTimeout(function(){
   toggleClass(typebox);
@@ -233,22 +229,11 @@ setTimeout(function(){
 toggleClass(title);
   toggleClass(gif3);
   previousClass(container);
-        clearInterval(intervalTimerseconds);
+  clearInterval(intervalTimerseconds);
     var card_count = 9;
     startTimerseconds(card_count, timecardr);
     toggleClass(card_rival);
-},39000);
-//191000
-
-setTimeout(function(){
-  message_admin.innerHTML = "Vous avez la préférence..."
-    toggleClass(message_admin);
-},40000);
-
-setTimeout(function(){
-    toggleClass(message_admin);
-},41000);
-
+},192000);
 
 setTimeout(function(){
 toggleClass(card_rival);
@@ -256,23 +241,51 @@ toggleClass(card_rival);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
-},49000);
+},202000);
 
 setTimeout(function(){
-toggleClass(container_avatar_seduced);
-},49000);
+  message_admin.innerHTML = "Vous avez la préférence..."
+    toggleClass(message_admin);
+},242000);
+
+setTimeout(function(){
+    toggleClass(message_admin);
+},247000);
+
 //211
 
-setTimeout(function(){
-revealClass(avatar_seduced);
-},51000);
+
 //212
 
 setTimeout(function(){
   message_admin.innerHTML = "Achevez votre rival!";
   toggleClass(message_admin);
   redClass(time_small);
-},50000);
+},262000);
+
+
+setTimeout(function(){
+    toggleClass(message_admin);
+      toggleClass(msgseduced);
+      redClass(time_small);
+    previousClass(container);
+    toggleClass(typebox);
+     toggleClass(time_small);
+title.innerHTML = "Votre courtisée prend sa décision"
+  toggleClass(wrapper_avatar_seduced);
+},12000);
+//282
+
+
+//285
+
+setTimeout(function(){
+title.innerHTML = "Félicitations, vous êtes le vainqueur."
+revealClass(avatar_seduced);
+},16000);
+//286
+
+
 
 // window.onload = function () {
 //     var one_round = 90;
