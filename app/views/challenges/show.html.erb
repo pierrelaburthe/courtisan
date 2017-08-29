@@ -106,7 +106,6 @@
         // Fetch all messages
         $.getScript("<%= challenge_path(@challenge) %>");
 
-        scroll_bottom();
         if (data.user_id == <%= current_user.id %>) {
           $('#message_content').val('');
         }
@@ -114,9 +113,6 @@
     }
   });
 
-  var scroll_bottom = function() {
-    $('#messages').scrollTop($('#messages')[0].scrollHeight + 10);
-  };
 
   </script>
 <% end %>
