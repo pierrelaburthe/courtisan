@@ -21,9 +21,8 @@
           <% end %>
 
 
-
-
           <% if WaitingList.all.blank? %>
+
 
             <%= form_for @waiting_list do |f| %>
               <%= f.hidden_field :seduced_id, value: User.where(gender: "Femme").sample.id  %>
@@ -31,11 +30,11 @@
               <%= f.submit "Jouer", class: "btn-red-custom btn-lg active jouer"%>
             <% end %>
 
-          <% else %>
+          <%# else %>
 
-            <%= link_to "Jouer", waiting_lists_join_path, class: "btn-red-custom btn-lg active jouer" %>
+            <%#= link_to "Jouer", waiting_lists_join_path, class: "btn-red-custom btn-lg active jouer" %>
 
-          <% end %>
+          <%# end %>
 
         </div>
 

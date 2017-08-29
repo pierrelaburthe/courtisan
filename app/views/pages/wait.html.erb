@@ -56,6 +56,21 @@
       </g>
   </svg>
 
+  <% content_for :after_js do %>
+  <script>
+  App.waiting = App.cable.subscriptions.create('WaitingChannel', {
+    received: function(data) {
+      console.log(data)
+      window.location.href = "/challenges/" + data.challenge_id;
+    }
+  });
+
+
+
+  </script>
+<% end %>
+
+
 
 
 
