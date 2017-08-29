@@ -21,7 +21,7 @@
           <% end %>
 
 
-          <% if WaitingList.all.blank? %>
+
 
 
             <%= form_for @waiting_list do |f| %>
@@ -30,11 +30,7 @@
               <%= f.submit "Jouer", class: "btn-red-custom btn-lg active jouer"%>
             <% end %>
 
-          <%# else %>
 
-            <%#= link_to "Jouer", waiting_lists_join_path, class: "btn-red-custom btn-lg active jouer" %>
-
-          <%# end %>
 
         </div>
 
