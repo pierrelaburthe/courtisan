@@ -51,6 +51,12 @@ const redClass = (position) => {
   }
 };
 
+const revealClass = (position) => {
+  if (position) {
+    position.classList.toggle("reveal-seduced");
+  }
+};
+
 const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
 const time_small = document.getElementById("smalltime");
@@ -71,7 +77,8 @@ const msgseducedcontent = document.getElementById('msgseducedcontent');
 const gif3 = document.getElementById('gifspace3');
 const card_rival = document.getElementById('card-rival');
 const timecardr = document.getElementById('cardtimer');
-
+const avatar_seduced = document.getElementById('f1_card');
+const container_avatar_seduced = document.getElementById('f1_container');
 
 window.onload = function () {
     var count = 2;
@@ -79,7 +86,6 @@ window.onload = function () {
 };
 
 setTimeout(function(){
-
   toggleClass(countdownText);
     toggleClass(message_big);
 },3000);
@@ -96,6 +102,7 @@ toggleClass(title);
     startTimerseconds(card_count, timecard);
 },4000);
 
+
 setTimeout(function(){
 toggleClass(card_seduced);
  toggleClass(time_small);
@@ -105,21 +112,19 @@ toggleClass(card_seduced);
 
 },14000);
 
-
-
 setTimeout(function(){
 
   toggleClass(msgseduced);
-  // if (message_admin) {
-  //   message_admin.innerHTML = "Lancez votre dernière joute";
-  // }
-},22000);
+
+},15000);
+//22000
 
 
 setTimeout(function(){
   toggleClass(message_admin);
   redClass(time_small);
-},74000);
+},17000);
+//74
 
 
 setTimeout(function(){
@@ -137,15 +142,15 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},94000);
-//84
+},18000);
+//94
 
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},97000);
-//87
+},21000);
+//97
 
 setTimeout(function(){
   toggleClass(typebox);
@@ -161,32 +166,40 @@ toggleClass(title);
     toggleClass(card_question);
 // };
 
-},98000);
-//88
-//22
-
+},22000);
+//98
 
       setTimeout(function(){
-
-
 toggleClass(card_question);
  toggleClass(time_small);
     time_small.innerHTML ="01:20";
     clearInterval(intervalTimerminutes);
     var one_round = 79;
       startTimer(one_round, time_small);
-},108000);
+},32000);
+      //108
+setTimeout(function(){
+  message_admin.innerHTML = "Votre rival à la préférence..."
+    toggleClass(message_admin);
+},32000);
+
+setTimeout(function(){
+    toggleClass(message_admin);
+},33000);
 
 setTimeout(function(){
   msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
   toggleClass(msgseduced);
-},122000);
-
+},33000);
+//122
 
 setTimeout(function(){
+
+  message_admin.innerHTML = "Lancez votre dernière joute!"
     toggleClass(message_admin);
   redClass(time_small);
-},167000);
+},34000);
+//167
 
 setTimeout(function(){
     toggleClass(message_admin);
@@ -203,13 +216,13 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},187000);
+},35000);
 //187
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},190000);
+},38000);
 //190
 
 setTimeout(function(){
@@ -223,10 +236,43 @@ toggleClass(title);
         clearInterval(intervalTimerseconds);
     var card_count = 9;
     startTimerseconds(card_count, timecardr);
-    toggleClass(card_question);
     toggleClass(card_rival);
-},191000);
-//191
+},39000);
+//191000
+
+setTimeout(function(){
+  message_admin.innerHTML = "Vous avez la préférence..."
+    toggleClass(message_admin);
+},40000);
+
+setTimeout(function(){
+    toggleClass(message_admin);
+},41000);
+
+
+setTimeout(function(){
+toggleClass(card_rival);
+ toggleClass(time_small);
+    clearInterval(intervalTimerseconds);
+    var one_round = 79;
+      startTimer(one_round, time_small);
+},49000);
+
+setTimeout(function(){
+toggleClass(container_avatar_seduced);
+},49000);
+//211
+
+setTimeout(function(){
+revealClass(avatar_seduced);
+},51000);
+//212
+
+setTimeout(function(){
+  message_admin.innerHTML = "Achevez votre rival!";
+  toggleClass(message_admin);
+  redClass(time_small);
+},50000);
 
 // window.onload = function () {
 //     var one_round = 90;
