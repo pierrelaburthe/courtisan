@@ -79,6 +79,9 @@ const card_rival = document.getElementById('card-rival');
 const timecardr = document.getElementById('cardtimer');
 const avatar_seduced = document.getElementById('f1_card');
 const wrapper_avatar_seduced = document.getElementById('wrapper-avatar-seduced');
+const loading_space = document.getElementById('loading_space');
+const reveal_space = document.getElementById('reveal_space');
+
 
 window.onload = function () {
     var count = 2;
@@ -272,19 +275,29 @@ setTimeout(function(){
     toggleClass(typebox);
      toggleClass(time_small);
 title.innerHTML = "Votre courtisée prend sa décision"
+// toggleClass(loading_space);
+       loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
-},12000);
+},282000);
 //282
 
-
 //285
-
 setTimeout(function(){
-title.innerHTML = "Félicitations, vous êtes le vainqueur."
-revealClass(avatar_seduced);
-},16000);
+// title.innerHTML = "Félicitations, vous êtes le vainqueur."
+title.innerHTML = "Votre courtisée a pris sa décision."
+
+toggleClass(loading_space);
+
+},286000);
 //286
 
+setTimeout(function(){
+toggleClass(reveal_space);
+},288000);
+
+setTimeout(function(){
+revealClass(avatar_seduced);
+},290000);
 
 
 // window.onload = function () {

@@ -2,6 +2,8 @@
   <div class="container-messages previous-color" id="container-messages" >
   <div class="header-messenger">
       <span class="message-content-admin hide" id = "msgadmin">Terminez votre présentation!</span>
+
+        <% @challenge.current_round = 1 %>
   <h2 class = "hide" id="title"> Première manche. Présentez-vous.</h2>
 
     <span class="avatar-time hide" id="smalltime"> 01:20 </span>
@@ -14,6 +16,8 @@
     <div class = "gif-space2 hide" id = "gifspace2"></div>
     <div class = "gif-space3 hide" id = "gifspace3"></div>
 
+
+
 <div class="hide" id = "wrapper-avatar-seduced">
   <div id="f1_container">
   <div id="f1_card" class="shadow">
@@ -22,9 +26,15 @@
   </div>
     <div class="back face center">
   <%= image_tag "audrey.png", class: "avatar-photo" %>
+  <div class="message-footer-seduced"> <%=  @challenge.seduced.first_name %></div>
     </div>
   </div>
   </div>
+<div class = "" id = "loading_space"></div>
+<div class = "hide" id = "reveal_space"> Félicitations, vous avez triomphé.
+<div class="btn-red-custom btn-lg active jouer">Parler avec votre douce</div>
+
+   </div>
 </div>
 
 
