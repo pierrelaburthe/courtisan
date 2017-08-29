@@ -75,7 +75,7 @@
   <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
-        <%= simple_form_for [@challenge, @message], remote: true do |f| %>
+        <%= simple_form_for [@challenge, @message], remote: true, html: { autocomplete: 'off'} do |f| %>
           <%= f.error_notification %>
           <%= f.input :content, label: "" %>
         <% end %>
