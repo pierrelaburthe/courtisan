@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
   resources :waiting_lists, only: [:create]
 
-  get 'waiting_lists/join'
-
   get 'pages/wait'
 
 
