@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   get 'challenges/wait'
+
   get 'users/profile'
 
   resources :waiting_lists, only: [:create]
