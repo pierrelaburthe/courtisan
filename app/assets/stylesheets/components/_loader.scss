@@ -35,21 +35,8 @@
 $max: 12;
 $angle: 360/$max;
 $size: 120px;
-$fill: dodgerblue;
+$fill: #750800;
 
-BODY {
-  background:
-    linear-gradient(45deg,
-      rgba(255,255,255,0) 48%,
-      rgba(255,255,255,.05) 50%,
-      rgba(255,255,255,0) 52%),
-  linear-gradient(-45deg,
-      rgba(255,255,255,0) 48%,
-      rgba(255,255,255,.05) 50%,
-      rgba(255,255,255,0) 52%);
-  background-size: 1em 1em;
-  background-color: #253237;
-  }
 
 .l-wrapper {
   position: absolute;
@@ -97,51 +84,6 @@ svg {
   fill-opacity: 0;
   animation-name: opacity;
   }
-
-.g-circles--v2 .g--circle {
-  fill-opacity: 0;
-  stroke-opacity: 0;
-  stroke-width: 1;
-  stroke: yellowgreen;
-  animation-name: opacity-stroke, colors, colors-stroke;
-  .u--circle {
-    //transform: scale(.6) translate(10px,10px);
-    //transform-origin: 10px 10px;
-    animation: transform-2 1.2s linear infinite;
-  }
-}
-
-.g-circles--v2 .g--circle {
-  @for $item from 1 through $max {
-    &:nth-child(#{$max}n + #{$item}) .u--circle{
-      animation-delay: -#{$item/10}s;
-    }
-  }
-}
-
-.g-circles--v3 .g--circle {
-  fill-opacity: 1;
-  animation-name: opacity, colors;
-  }
-
-.g-circles--v4 {
-  .g--circle {
-    fill-opacity: 1;
-    fill: orange;
-    animation-name: opacity, colors-3;
-  }
-  .u--circle {
-    animation: transform 1.2s linear infinite;
-  }
-}
-
-.g-circles--v4 .g--circle {
-  @for $item from 1 through $max {
-    &:nth-child(#{$max}n + #{$item}) .u--circle{
-      animation-delay: -#{$item/10}s;
-    }
-  }
-}
 
 
 @keyframes opacity {
