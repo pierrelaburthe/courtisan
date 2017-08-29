@@ -278,7 +278,7 @@ title.innerHTML = "Votre courtisée prend sa décision"
 // toggleClass(loading_space);
        loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
-},5000);
+},282000);
 //282
 
 //285
@@ -288,16 +288,16 @@ title.innerHTML = "Votre courtisée a pris sa décision."
 
 toggleClass(loading_space);
 
-},10000);
+},286000);
 //286
 
 setTimeout(function(){
 toggleClass(reveal_space);
-},12000);
+},288000);
 
 setTimeout(function(){
 revealClass(avatar_seduced);
-},14000);
+},290000);
 
 
 // window.onload = function () {
