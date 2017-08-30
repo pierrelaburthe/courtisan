@@ -91,8 +91,7 @@ window.onload = function () {
 };
 
 setTimeout(function(){
-  toggleClass(countdownText);
-    toggleClass(message_big);
+  countdownText.innerHTML= "Joutez!";
 },3000);
 
 setTimeout(function(){
