@@ -9,6 +9,22 @@
   color: white;
 }
 
+.btn-back{
+position: absolute;
+top: 10px;
+left:10px;
+background-color: rgb(200,200,200);
+color: white;
+font-size: 20px;
+
+padding: 10px;
+
+&:hover{
+  text-decoration: none;
+  color: white;
+}
+}
+
 .avatar-photo, .avatar-logo{
   height:100px;
   width: 100px;
@@ -33,6 +49,7 @@ height: 40px;
 #loading_space, #reveal_space {
     font-size: 70px;
   color: #750800;
+  position: relative;
 
   .btn-red-custom{
 margin-left: 62vh;
