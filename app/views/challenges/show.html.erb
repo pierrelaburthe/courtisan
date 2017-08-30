@@ -1,5 +1,5 @@
 <div class="container-messenger" id="container-messenger" >
-  <div class="container-messages previous-color" id="container-messages" >
+  <div class="container-messages" id="container-messages" >
 
     <div class="header-messenger">
       <span class="message-content-admin hide" id = "msgadmin">Terminez votre présentation!</span>
@@ -7,7 +7,7 @@
       <span class="avatar-time hide" id="smalltime"> 01:20 </span>
     </div>
 
-    <div class="container-displayeffects">
+    <div class="container-displayeffects previous-color" id= "container-displayeffects">
       <%= link_to "Retour à l'arène", root_path, class: "btn-back hide", id: "btn-back" %>
       <div class = "countdown-text" id = "countdown-text">Le <span id = "encours"> duel </span> débute dans <span id = "bigtime">3</span> secondes. </div>
       <span class = "hide" id = "bigmsg"> Joutez! </span>
@@ -74,7 +74,6 @@
         <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
       </div>
     </div>
-
 
     <div class="body-container-messages">
       <div id="messages">
