@@ -1,8 +1,10 @@
 class ChatroomsController < ApplicationController
 
   def show
-    @chatroom = Chatroom.find(params[:id])
-    @discussion = Discussion.new
+    @chatroom = Chatroom.includes(discussions: :user).find(params[:id])
+    # @discussion = Discussion.new
+    # raise
+
   end
 
   def create

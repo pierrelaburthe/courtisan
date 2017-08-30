@@ -1,6 +1,6 @@
 class DiscussionsController < ApplicationController
 
- def create
+  def create
   @discussion = Discussion.new(discussion_params)
   @chatroom = Chatroom.find(params[:chatroom_id])
   @discussion.chatroom = @chatroom
@@ -16,13 +16,11 @@ class DiscussionsController < ApplicationController
       format.js
     end
   end
- end
+  end
 
- private
+  private
 
- def discussion_params
+  def discussion_params
     params.require(:discussion).permit(:content)
- end
-
-
+  end
 end
