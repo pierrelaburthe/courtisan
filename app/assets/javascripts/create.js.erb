@@ -1,0 +1,10 @@
+<% if @discussion.error.any? %>
+
+<% else %>
+  const = discussionContainer = document.querySelector('.messages')
+  discussionContainer.insertAdjacentHTML('beforeend', '<%= j render "discussion", discussion: @discussion %>')
+  const input = document.querySelector(".message-content-me");
+  input.value = '';
+  input.blur();
+
+<% end %>

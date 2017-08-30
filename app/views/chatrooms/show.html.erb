@@ -1,0 +1,27 @@
+<h4>Parlez avec votre douce</h4>
+
+<div class="messages">
+ <% @chatroom.discussions.each do |discussion| %>
+  <%= render "discussions/discussion", discussion: discussion %>
+ <% end %>
+</div>
+
+<div id="create-discussion">
+  <%= simple_form_for [@chatroom, @discussion], remote: true do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :content, label: false %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

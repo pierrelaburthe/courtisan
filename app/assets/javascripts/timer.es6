@@ -91,7 +91,7 @@ window.onload = function () {
 setTimeout(function(){
   toggleClass(countdownText);
     toggleClass(message_big);
-},3000);
+},1);
 
 setTimeout(function(){
   toggleClass(typebox);
@@ -103,7 +103,7 @@ toggleClass(title);
           clearInterval(intervalTimerseconds);
     var card_count = 9;
     startTimerseconds(card_count, timecard);
-},4000);
+},1);
 
 
 setTimeout(function(){
@@ -113,20 +113,20 @@ toggleClass(card_seduced);
     var one_round = 79;
       startTimer(one_round, time_small);
 
-},14000);
+},1);
 
 setTimeout(function(){
 
   toggleClass(msgseduced);
 
-},22000);
+},1);
 //22000
 
 
 setTimeout(function(){
   toggleClass(message_admin);
   redClass(time_small);
-},74000);
+},1);
 
 
 
@@ -145,14 +145,14 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},94000);
+},1);
 //94
 
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},97000);
+},1);
 
 
 setTimeout(function(){
@@ -169,7 +169,7 @@ toggleClass(title);
     toggleClass(card_question);
 // };
 
-},98000);
+},1);
 //98
 
       setTimeout(function(){
@@ -179,28 +179,28 @@ toggleClass(card_question);
     clearInterval(intervalTimerminutes);
     var one_round = 79;
       startTimer(one_round, time_small);
-},108000);
+},1);
 
 setTimeout(function(){
   msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
   toggleClass(msgseduced);
-},128000);
+},1);
 
   setTimeout(function(){
   message_admin.innerHTML = "Votre rival à la préférence..."
     toggleClass(message_admin);
-},148000);
+},1);
 
 setTimeout(function(){
     toggleClass(message_admin);
-},153000);
+},1);
 
 
 setTimeout(function(){
   message_admin.innerHTML = "Lancez votre dernière joute!"
     toggleClass(message_admin);
   redClass(time_small);
-},168000);
+},1);
 
 setTimeout(function(){
     toggleClass(message_admin);
@@ -217,12 +217,12 @@ setTimeout(function(){
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
-},188000);
+},1);
 
 setTimeout(function(){
       toggleClass(countdownText);
   toggleClass(message_big);
-},191000);
+},1);
 
 setTimeout(function(){
   toggleClass(typebox);
@@ -236,7 +236,7 @@ toggleClass(title);
     var card_count = 9;
     startTimerseconds(card_count, timecardr);
     toggleClass(card_rival);
-},192000);
+},1);
 
 setTimeout(function(){
 toggleClass(card_rival);
@@ -244,16 +244,16 @@ toggleClass(card_rival);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
-},202000);
+},1);
 
 setTimeout(function(){
   message_admin.innerHTML = "Vous avez la préférence..."
     toggleClass(message_admin);
-},242000);
+},1);
 
 setTimeout(function(){
     toggleClass(message_admin);
-},247000);
+},1);
 
 //211
 
@@ -264,7 +264,7 @@ setTimeout(function(){
   message_admin.innerHTML = "Achevez votre rival!";
   toggleClass(message_admin);
   redClass(time_small);
-},262000);
+},1);
 
 
 setTimeout(function(){
@@ -278,7 +278,7 @@ title.innerHTML = "Votre courtisée prend sa décision"
 // toggleClass(loading_space);
        loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
-},282000);
+},1);
 //282
 
 //285
@@ -288,16 +288,16 @@ title.innerHTML = "Votre courtisée a pris sa décision."
 
 toggleClass(loading_space);
 
-},286000);
+},1);
 //286
 
 setTimeout(function(){
 toggleClass(reveal_space);
-},288000);
+},1);
 
 setTimeout(function(){
 revealClass(avatar_seduced);
-},290000);
+},1);
 
 
 // window.onload = function () {

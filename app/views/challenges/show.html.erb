@@ -32,7 +32,12 @@
   </div>
 <div class = "" id = "loading_space"></div>
 <div class = "hide" id = "reveal_space"> Félicitations, vous avez triomphé.
-<div class="btn-red-custom btn-lg active jouer">Parler avec votre douce</div>
+
+  <%= form_for @chatroom do |f| %>
+    <%= f.hidden_field :seduced_id, value: @challenge.seduced_id %>
+    <%= f.hidden_field :seducer_id, value: current_user.id %>
+    <%= f.submit "Parler avec votre douce", class: "btn-red-custom btn-lg active jouer"%>
+  <% end %>
 
    </div>
 </div>
