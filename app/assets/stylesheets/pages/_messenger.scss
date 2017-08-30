@@ -6,11 +6,13 @@
 }
 
 .header-messenger{
+
   text-align: center;
   color: rgb(100,100,100);
   margin:0px;
   position: relative;
   h2{
+     font-family: 'Satisfy';
     letter-spacing: 0.3px;
     color: black;
   font-size: 25px;
@@ -88,7 +90,7 @@
 
 .message-content-seduced {
   color: white;
-  background-color: #E20049;
+  background-color: #750800;
     margin-left: 60vh;
     text-align:center;
 margin-top:20px;
@@ -111,6 +113,7 @@ font-size: 20px;
 .message-footer, .message-footer-rival, .message-footer-seduced{
   font-size: 15px;
   color: rgb(200,200,200);
+         font-family: 'Satisfy';
 }
 
 .message-footer{

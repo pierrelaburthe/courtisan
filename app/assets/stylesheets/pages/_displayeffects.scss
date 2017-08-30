@@ -1,5 +1,6 @@
 .countdown-text, #bigmsg {
-  font-family: Palanquin;
+    padding-top: 20px;
+  font-family: Satisfy;
   font-weight: 100;
   font-size: 40px;
 }
@@ -9,10 +10,12 @@
   z-index: 5;
   width:158vh;
   text-align: center;
+  align-items: center;
+  margin: auto;
 }
 
 .red{
-  background-color: red;
+  background-color: #750800;
   color: white;
 }
 
@@ -122,6 +125,10 @@ text-align: center;
   }
 }
 
+.disparition-carte {
+
+}
+
 .logo_small {
   width:50px;
   height:30px;
@@ -129,12 +136,12 @@ text-align: center;
 
 .gif-space, .gif-space2, .gif-space3{
   background-size: cover;
-  height: 62vh;
-  background-color: red;
+  height: 66vh;
+
 }
 
 .gif-space{
-    margin-top:100px;
+    margin-top:50px;
   background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
 }
 

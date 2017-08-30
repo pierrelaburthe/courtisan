@@ -91,8 +91,7 @@ window.onload = function () {
 };
 
 setTimeout(function(){
-  toggleClass(countdownText);
-    toggleClass(message_big);
+  countdownText.innerHTML= "Joutez!";
 },3000);
 
 setTimeout(function(){
@@ -278,7 +277,7 @@ title.innerHTML = "Votre courtisée prend sa décision"
 // toggleClass(loading_space);
        loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
-},12000);
+},282000);
 //282
 
 
@@ -288,18 +287,18 @@ setTimeout(function(){
 title.innerHTML = "Votre courtisée a pris sa décision."
 toggleClass(loading_space);
 
-},16000);
+},286000);
 //286
 
 setTimeout(function(){
 toggleClass(reveal_space);
 toggleClass(btn_back)
-},18000);
+},288000);
 //288
 
 setTimeout(function(){
 revealClass(avatar_seduced);
-},19000);
+},290000);
 //290
 
 
