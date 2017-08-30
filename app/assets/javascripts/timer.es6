@@ -81,6 +81,8 @@ const avatar_seduced = document.getElementById('f1_card');
 const wrapper_avatar_seduced = document.getElementById('wrapper-avatar-seduced');
 const loading_space = document.getElementById('loading_space');
 const reveal_space = document.getElementById('reveal_space');
+const btn_back = document.getElementById('btn-back');
+
 
 
 window.onload = function () {
@@ -127,7 +129,6 @@ setTimeout(function(){
   toggleClass(message_admin);
   redClass(time_small);
 },74000);
-
 
 
 setTimeout(function(){
@@ -204,6 +205,7 @@ setTimeout(function(){
 
 setTimeout(function(){
     toggleClass(message_admin);
+
       toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
@@ -214,6 +216,7 @@ setTimeout(function(){
    time_big.innerHTML ="3";
      toggleClass(gif3);
     encours.innerHTML = "round 3";
+
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
@@ -241,6 +244,8 @@ toggleClass(title);
 setTimeout(function(){
 toggleClass(card_rival);
  toggleClass(time_small);
+     time_small.innerHTML ="01:20";
+    clearInterval(intervalTimerminutes);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
@@ -255,20 +260,15 @@ setTimeout(function(){
     toggleClass(message_admin);
 },247000);
 
-//211
-
-
-//212
-
 setTimeout(function(){
   message_admin.innerHTML = "Achevez votre rival!";
   toggleClass(message_admin);
   redClass(time_small);
 },262000);
 
-
 setTimeout(function(){
-    toggleClass(message_admin);
+    message_admin.innerHTML = "Le duel est terminé.";
+    // toggleClass(message_admin);
       toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
@@ -281,11 +281,11 @@ title.innerHTML = "Votre courtisée prend sa décision"
 },282000);
 //282
 
-//285
+
 setTimeout(function(){
+  toggleClass(message_admin);
 // title.innerHTML = "Félicitations, vous êtes le vainqueur."
 title.innerHTML = "Votre courtisée a pris sa décision."
-
 toggleClass(loading_space);
 
 },286000);
@@ -293,11 +293,14 @@ toggleClass(loading_space);
 
 setTimeout(function(){
 toggleClass(reveal_space);
+toggleClass(btn_back)
 },288000);
+//288
 
 setTimeout(function(){
 revealClass(avatar_seduced);
 },290000);
+//290
 
 
 // window.onload = function () {
