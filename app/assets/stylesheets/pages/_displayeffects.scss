@@ -108,11 +108,12 @@ font-size: 20px;
 }
 
 .card-seduced, .card-question, .card-rival {
+
 text-align: center;
   font-family: Palanquin;
   position: relative;
-  width: 250px;
-  margin-left:60vh;
+  width: 300px;
+  margin: auto;
   // background-color: rgb(240,240,240);
   background-color: rgb(70,70,70);
   color: white;
@@ -122,16 +123,25 @@ text-align: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
   .generated_text{
     font-weight: 100;
+    font-size:15px;
+    opacity: 0.8;
   }
+
 }
 
 .disparition-carte {
-
+    padding-bottom: 10px;
+    opacity: 0.8;
+font-size: 15px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+    font-weight: 100;
+    margin: 10px 50px;
 }
 
 .logo_small {
-  width:50px;
-  height:30px;
+    width: 70px;
+    height: 35px;
 }
 
 .gif-space, .gif-space2, .gif-space3{
