@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
   root to: 'pages#home'
 
+   %w( 404 422 500 503 ).each do |code|
+    get code, :to => "errors#show", :code => code
+  end
+
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
