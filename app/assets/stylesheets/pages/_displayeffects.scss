@@ -6,8 +6,11 @@
 
 .container-displayeffects{
   position: absolute;
-  z-index: 3;
+  z-index: 5;
+  width:158vh;
+  text-align: center;
 }
+
 .red{
   background-color: red;
   color: white;
@@ -26,6 +29,7 @@ padding: 10px;
 &:hover{
   text-decoration: none;
   color: white;
+  background-color: rgb(180,180,180);
 }
 }
 
@@ -45,13 +49,14 @@ height: 40px;
 }
 
 #wrapper-avatar-seduced {
-  height: 90vh;
+  height: 70vh;
 
 }
 
 
 #loading_space, #reveal_space {
     font-size: 70px;
+    height:20vh;
   color: #750800;
   position: relative;
 
@@ -100,6 +105,7 @@ font-size: 20px;
 }
 
 .card-seduced, .card-question, .card-rival {
+text-align: center;
   font-family: Palanquin;
   position: relative;
   width: 250px;
@@ -124,7 +130,7 @@ font-size: 20px;
 .gif-space, .gif-space2, .gif-space3{
   background-size: cover;
   height: 62vh;
-
+  background-color: red;
 }
 
 .gif-space{
@@ -133,13 +139,14 @@ font-size: 20px;
 }
 
 .gif-space2{
-background-image: url("https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif");
+background-image: url("https://media.giphy.com/media/l41lKvLqu2xcYX8ly/giphy.gif");
     margin-top: 40px;
     background-position: center;
 
 }
 .gif-space3{
-  background-image: url("https://media.giphy.com/media/l41lKvLqu2xcYX8ly/giphy.gif");
+  background-image: url("https://media.giphy.com/media/cE07NmAen6Yzm/giphy.gif");
+
   margin-top: 40px;
   background-position: center;
 }
@@ -157,11 +164,13 @@ font-size:23px;
 }
 
 .previous-color{
+  position:absolute;
   background: repeating-linear-gradient(
-  45deg,
-  rgb(240,240,240),
-  rgb(240,240,240) 2px,
-  white 2px,
-  white 4px
-)!important;
+              45deg,
+              rgb(240,240,240),
+              rgb(240,240,240) 2px,
+              white 2px,
+              white 4px
+            )!important;
+  // z-index:5;
 }

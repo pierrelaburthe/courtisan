@@ -61,7 +61,7 @@ const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
 const time_small = document.getElementById("smalltime");
 const message_admin= document.getElementById("msgadmin");
-const container = document.getElementById("container-messages");
+const container = document.getElementById("container-displayeffects");
 const card_seduced = document.getElementById("card-seduced");
 const typebox= document.getElementById("typebox");
 const gif = document.getElementById('gifspace');
@@ -171,7 +171,7 @@ toggleClass(title);
 // };
 
 },98000);
-//98
+// //98
 
       setTimeout(function(){
 toggleClass(card_question);
@@ -278,7 +278,7 @@ title.innerHTML = "Votre courtisée prend sa décision"
 // toggleClass(loading_space);
        loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
-},282000);
+},12000);
 //282
 
 
@@ -288,41 +288,41 @@ setTimeout(function(){
 title.innerHTML = "Votre courtisée a pris sa décision."
 toggleClass(loading_space);
 
-},286000);
+},16000);
 //286
 
 setTimeout(function(){
 toggleClass(reveal_space);
 toggleClass(btn_back)
-},288000);
+},18000);
 //288
 
 setTimeout(function(){
 revealClass(avatar_seduced);
-},290000);
+},19000);
 //290
 
 
-// window.onload = function () {
-//     var one_round = 90;
-//     startTimer(one_round, time_small);
-// };
+// // window.onload = function () {
+// //     var one_round = 90;
+// //     startTimer(one_round, time_small);
+// // };
 
 
 
-// setTimeout(function(){
-// message_admin.innerHTML = "shalom";
+// // setTimeout(function(){
+// // message_admin.innerHTML = "shalom";
 
-// },5000);
+// // },5000);
 
-// window.onload = function () {
-//     var one_round = 90;
-//     startTimer(one_round, time_small);
-// };
+// // window.onload = function () {
+// //     var one_round = 90;
+// //     startTimer(one_round, time_small);
+// // };
 
 
 
-// setTimeout(function(){
-// message_admin.innerHTML = "shalom";
+// // setTimeout(function(){
+// // message_admin.innerHTML = "shalom";
 
-// },5000);
+// // },5000);
