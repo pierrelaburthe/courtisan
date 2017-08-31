@@ -87,21 +87,23 @@ const count_heart_blue = document.getElementById('count-heart-blue');
 const count_heart_grey = document.getElementById('count-heart-grey');
 
 
-
 window.onload = function () {
     var count = 2;
     startTimerseconds(count, time_big);
 };
 
 setTimeout(function(){
-  countdownText.innerHTML= "Joutez!";
+  // countdownText.innerHTML= "Joutez!";
+  toggleClass(message_big);
+  message_big.innerHTML= "Joutez!";
+    toggleClass(countdownText);
 },3000);
 
 setTimeout(function(){
   toggleClass(typebox);
-      toggleClass(gif);
-  toggleClass(countdownText);
-toggleClass(title);
+  toggleClass(gif);
+  toggleClass(message_big);
+  toggleClass(title);
   previousClass(container);
     toggleClass(card_seduced);
           clearInterval(intervalTimerseconds);
@@ -117,13 +119,10 @@ toggleClass(card_seduced);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
-
 },14000);
 
 setTimeout(function(){
-
   toggleClass(msgseduced);
-
 },22000);
 //22000
 
@@ -157,12 +156,10 @@ count_heart_blue.innerHTML = "3";
 toggleClass(heart_9);
 },100000);
 
-
 setTimeout(function(){
   message_admin.innerHTML= "Terminez votre présentation!"
   redClass(time_small);
 },74000);
-
 
 setTimeout(function(){
       toggleClass(msgseduced);
@@ -198,8 +195,6 @@ toggleClass(title);
     var card_count = 9;
     startTimerseconds(card_count, timecardq);
     toggleClass(card_question);
-// };
-
 },98000);
 // //98
 
