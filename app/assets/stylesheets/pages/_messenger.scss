@@ -5,23 +5,25 @@
   height: 100vh;
 }
 
-
-
-
 .header-messenger{
+
   text-align: center;
   color: rgb(100,100,100);
   margin:0px;
   position: relative;
+
   h2{
+      //   padding-top: 15px;
+      // padding-bottom: 10px;
+     font-family: 'Satisfy';
     letter-spacing: 0.3px;
     color: black;
   font-size: 25px;
   margin:10px;
-  padding:5px;
-  border-bottom-style: solid;
+  padding:10px;
+  border-bottom-style: dashed;
   border-bottom-width: 1px;
-  border-bottom-color: rgb(200,200,200);
+  border-bottom-color: rgb(100,100,100);
   }
 }
 
@@ -32,17 +34,28 @@
   height: 30px;
   width: 70px;
   position: absolute;
-  top: 5px;
+  top: 8px;
   right: 5px;
   font-size:20px;
 }
 
+.container-card-seduced{
+  align-items: center;
+}
+
+.msg-manche{
+ position: absolute;
+  top: 15px;
+  right: 85px;
+  font-size: 13px;
+}
+
 .text-right{
-  margin-left: 110vh;
+  margin-left: 115vh;
 }
 
 .text-left{
-  margin-right: 80vh;
+  margin-right: 90vh;
 }
 
 .message-content-admin{
@@ -62,7 +75,7 @@
   background-color: white;
   border-radius: 5px;
   .body-container-messages{
-    height: 75vh;
+    height: 72vh;
     overflow: auto;
     text-align: center;
     position: relative;
@@ -84,23 +97,22 @@
 }
 .message-content-me{
   color: white;
-  background-color: #0084FF;
+  background-color: #0245A3;
   padding-left: 25px;
   margin-left: 15px;
 }
 
 .message-content-seduced {
   color: white;
-  background-color: #E20049;
+  background-color: #750800;
     margin-left: 60vh;
     text-align:center;
-margin-top:20px;
 }
 .message-content-rival{
   color: black;
   background-color: #e2e0e0;
   padding-left: 25px;
-  margin-left: 35px;
+  margin-left: 7px;
 }
 
 .message-content-admin{
@@ -112,8 +124,11 @@ font-size: 20px;
 }
 
 .message-footer, .message-footer-rival, .message-footer-seduced{
+
   font-size: 15px;
   color: rgb(200,200,200);
+         font-family: 'Satisfy';
+
 }
 
 .message-footer{
@@ -122,13 +137,23 @@ font-size: 20px;
 
 
 .message-footer{
-  margin-right: 50px;
+  margin-right: 17px;
   text-align: right;
+        .fa-heart{
+    padding-right: 220px;
+    font-size: 23px;
+    color: #750800;
+  }
 }
 
 .message-footer-rival{
-  margin-left: 50px;
+  margin-left: 25px;
   text-align: left;
+      .fa-heart{
+    padding-left: 220px;
+    font-size: 23px;
+    color: #750800;
+  }
 }
 
 abbr {

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :messages, only: [ :create ]
   end
 
+
   get 'challenges/wait'
 
   get 'users/profile'

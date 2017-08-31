@@ -61,7 +61,7 @@ const message_big = document.getElementById("bigmsg");
 const time_big = document.getElementById("bigtime");
 const time_small = document.getElementById("smalltime");
 const message_admin= document.getElementById("msgadmin");
-const container = document.getElementById("container-messages");
+const container = document.getElementById("container-displayeffects");
 const card_seduced = document.getElementById("card-seduced");
 const typebox= document.getElementById("typebox");
 const gif = document.getElementById('gifspace');
@@ -81,6 +81,8 @@ const avatar_seduced = document.getElementById('f1_card');
 const wrapper_avatar_seduced = document.getElementById('wrapper-avatar-seduced');
 const loading_space = document.getElementById('loading_space');
 const reveal_space = document.getElementById('reveal_space');
+const btn_back = document.getElementById('btn-back');
+const msg_manche = document.getElementById('msg-manche');
 
 
 window.onload = function () {
@@ -93,10 +95,14 @@ setTimeout(function(){
     toggleClass(message_big);
 },1);
 
+  countdownText.innerHTML= "Joutez!";
+},3000);
+
+
 setTimeout(function(){
   toggleClass(typebox);
       toggleClass(gif);
-  toggleClass(message_big);
+  toggleClass(countdownText);
 toggleClass(title);
   previousClass(container);
     toggleClass(card_seduced);
@@ -109,6 +115,7 @@ toggleClass(title);
 setTimeout(function(){
 toggleClass(card_seduced);
  toggleClass(time_small);
+  toggleClass(msg_manche);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
@@ -121,6 +128,7 @@ setTimeout(function(){
 
 },1);
 //22000
+
 
 
 setTimeout(function(){
@@ -159,9 +167,12 @@ setTimeout(function(){
 },1);
 
 
-setTimeout(function(){
-  toggleClass(typebox);
-  toggleClass(message_big);
+// setTimeout(function(){
+//   toggleClass(message_admin);
+//   redClass(time_small);
+// },74000);
+
+
 
   if (title !== null) {
     title.innerHTML = "Seconde manche. Répondez à votre courtisée."
@@ -206,6 +217,66 @@ setTimeout(function(){
 setTimeout(function(){
     toggleClass(message_admin);
 },1);
+
+// setTimeout(function(){
+//     toggleClass(message_admin);
+//       toggleClass(msgseduced);
+//       redClass(time_small);
+//     previousClass(container);
+//     toggleClass(typebox);
+//  toggleClass(time_small);
+//   toggleClass(msg_manche);
+//  toggleClass(title);
+//   toggleClass(countdownText);
+//    time_big.innerHTML ="3";
+//      toggleClass(gif2);
+//     encours.innerHTML = "round 2";
+//         clearInterval(intervalTimerseconds);
+//         var count = 2;
+//     startTimerseconds(count, time_big);
+// },94000);
+// //94
+
+
+// setTimeout(function(){
+
+//   countdownText.innerHTML= "Joutez!";
+// },97000);
+
+
+// setTimeout(function(){
+//   toggleClass(typebox);
+//       toggleClass(countdownText);
+
+//   title.innerHTML = "Seconde manche. Répondez à votre courtisée."
+// toggleClass(title);
+//   toggleClass(gif2);
+//   previousClass(container);
+//         clearInterval(intervalTimerseconds);
+//     var card_count = 9;
+//     startTimerseconds(card_count, timecardq);
+//     toggleClass(card_question);
+// // };
+
+// },98000);
+// // //98
+
+//       setTimeout(function(){
+// toggleClass(card_question);
+//  toggleClass(time_small);
+//   toggleClass(msg_manche);
+
+//     time_small.innerHTML ="01:20";
+//     clearInterval(intervalTimerminutes);
+//     var one_round = 79;
+//       startTimer(one_round, time_small);
+// },108000);
+
+
+// setTimeout(function(){
+//   msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
+//   toggleClass(msgseduced);
+// },128000);
 
 
 setTimeout(function(){
@@ -276,10 +347,88 @@ setTimeout(function(){
     toggleClass(message_admin);
 },1);
 
-//211
+//   setTimeout(function(){
+//   message_admin.innerHTML = "Votre rival à la préférence..."
+//     toggleClass(message_admin);
+// },148000);
+
+// setTimeout(function(){
+//     toggleClass(message_admin);
+// },153000);
 
 
-//212
+// setTimeout(function(){
+//   message_admin.innerHTML = "Lancez votre dernière joute!"
+//     toggleClass(message_admin);
+//   redClass(time_small);
+// },168000);
+
+// setTimeout(function(){
+//     toggleClass(message_admin);
+
+//       toggleClass(msgseduced);
+//       redClass(time_small);
+//     previousClass(container);
+//     toggleClass(typebox);
+//     toggleClass(time_small);
+//   toggleClass(msg_manche);
+//  toggleClass(title);
+//   toggleClass(countdownText);
+//    time_big.innerHTML ="3";
+//      toggleClass(gif3);
+//     encours.innerHTML = "round 3";
+
+//         clearInterval(intervalTimerseconds);
+//         var count = 2;
+//     startTimerseconds(count, time_big);
+// },188000);
+
+// setTimeout(function(){
+//       toggleClass(countdownText);
+//   countdownText.innerHTML= "Joutez!";
+// },191000);
+
+// setTimeout(function(){
+//   toggleClass(typebox);
+//       toggleClass(countdownText);
+
+//   title.innerHTML = "Troisième manche. Provoquez votre rival."
+// toggleClass(title);
+//   toggleClass(gif3);
+//   previousClass(container);
+//   clearInterval(intervalTimerseconds);
+//     var card_count = 9;
+//     startTimerseconds(card_count, timecardr);
+//     toggleClass(card_rival);
+// },192000);
+
+// setTimeout(function(){
+// toggleClass(card_rival);
+//  toggleClass(time_small);
+//   toggleClass(msg_manche);
+//      time_small.innerHTML ="01:20";
+//     clearInterval(intervalTimerminutes);
+//     clearInterval(intervalTimerseconds);
+//     var one_round = 79;
+//       startTimer(one_round, time_small);
+// },202000);
+
+
+// setTimeout(function(){
+//   message_admin.innerHTML = "Vous avez la préférence..."
+//     toggleClass(message_admin);
+// },242000);
+
+// setTimeout(function(){
+//     toggleClass(message_admin);
+// },247000);
+
+// setTimeout(function(){
+//   message_admin.innerHTML = "Achevez votre rival!";
+//   toggleClass(message_admin);
+//   redClass(time_small);
+// },262000);
+
 
 setTimeout(function(){
   if (message_admin !== null) {
@@ -327,28 +476,66 @@ toggleClass(reveal_space);
 setTimeout(function(){
 revealClass(avatar_seduced);
 },1);
-
-
-// window.onload = function () {
-//     var one_round = 90;
-//     startTimer(one_round, time_small);
-// };
-
+=======
+// setTimeout(function(){
+//     message_admin.innerHTML = "Le duel est terminé.";
+//     // toggleClass(message_admin);
+//       toggleClass(msgseduced);
+//       redClass(time_small);
+//     previousClass(container);
+//     toggleClass(typebox);
+//       toggleClass(time_small);
+//   toggleClass(msg_manche);
+// title.innerHTML = "Votre courtisée prend sa décision"
+// // toggleClass(loading_space);
+//        loading_space.classList.toggle("loading");
+//   toggleClass(wrapper_avatar_seduced);
+// },282000);
+// //282
 
 
 // setTimeout(function(){
-// message_admin.innerHTML = "shalom";
+//   toggleClass(message_admin);
+// // title.innerHTML = "Félicitations, vous êtes le vainqueur."
+// title.innerHTML = "Votre courtisée a pris sa décision."
+// toggleClass(loading_space);
 
-// },5000);
-
-// window.onload = function () {
-//     var one_round = 90;
-//     startTimer(one_round, time_small);
-// };
-
-
+// },286000);
+// //286
 
 // setTimeout(function(){
-// message_admin.innerHTML = "shalom";
+// toggleClass(reveal_space);
+// toggleClass(btn_back)
+// },288000);
+// //288
 
-// },5000);
+// setTimeout(function(){
+// revealClass(avatar_seduced);
+// },290000);
+// //290
+
+
+
+// // window.onload = function () {
+// //     var one_round = 90;
+// //     startTimer(one_round, time_small);
+// // };
+
+
+
+// // setTimeout(function(){
+// // message_admin.innerHTML = "shalom";
+
+// // },5000);
+
+// // window.onload = function () {
+// //     var one_round = 90;
+// //     startTimer(one_round, time_small);
+// // };
+
+
+
+// // setTimeout(function(){
+// // message_admin.innerHTML = "shalom";
+
+// // },5000);

@@ -26,6 +26,24 @@ module Courtisan
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    config.assets.paths << Emoji.images_path
+
+    config.assets.precompile << 'emoji/**/*.png'
+
+
+
+    config.assets.precompile << "emoji/**/*.png"
+    config.assets.precompile << "emoji/unicode/*.png"
+    config.assets.precompile << "emoji/*.png"
+    config.assets.paths << "#{Rails.root}/public/images/emoji"
+    config.assets.paths << "#{Rails.root}/public/images/emoji/*"
+    config.assets.paths << "#{Rails.root}/public/images/emoji/*.png"
+    config.assets.paths << "#{Rails.root}/public/images/emoji/*/unicode/*.png"
+    config.assets.paths << "#{Rails.root}/public/images"
+
+
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

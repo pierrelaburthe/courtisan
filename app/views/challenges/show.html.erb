@@ -1,33 +1,13 @@
 <div class="container-messenger" id="container-messenger" >
-  <div class="container-messages previous-color" id="container-messages" >
-  <div class="header-messenger">
+  <div class="container-messages" id="container-messages" >
+
+    <div class="header-messenger">
       <span class="message-content-admin hide" id = "msgadmin">Terminez votre présentation!</span>
-
-        <% @challenge.current_round = 1 %>
-  <h2 class = "hide" id="title"> Première manche. Présentez-vous.</h2>
-
-    <span class="avatar-time hide" id="smalltime"> 01:20 </span>
-
-  </div>
-<div class="body-container-messages">
-  <div class = "countdown-text" id = "countdown-text">Le <span id = "encours"> duel </span> débute dans <span id = "bigtime">3</span> secondes. </div>
-  <span class = "hide" id = "bigmsg"> Joutez! </span>
-  <div class = "gif-space" id = "gifspace"></div>
-    <div class = "gif-space2 hide" id = "gifspace2"></div>
-    <div class = "gif-space3 hide" id = "gifspace3"></div>
-
-
-
-<div class="hide" id = "wrapper-avatar-seduced">
-  <div id="f1_container">
-  <div id="f1_card" class="shadow">
-    <div class="front face avatar-logo">
-  <%= image_tag "logo.png", class: "avatar-img"%>
-  </div>
-    <div class="back face center">
-  <%= image_tag "audrey.png", class: "avatar-photo" %>
-  <div class="message-footer-seduced"> <%=  @challenge.seduced.first_name %></div>
+      <h2 class = "hide" id="title"> Première manche. Présentez-vous.</h2>
+      <span class = "msg-manche hide" id ="msg-manche">La manche se termine dans </span>
+      <span class="avatar-time hide" id="smalltime"> 01:20 </span>
     </div>
+
   </div>
   </div>
 <div class = "" id = "loading_space"></div>
@@ -42,61 +22,87 @@
    </div>
 </div>
 
+    <div class="container-displayeffects previous-color" id= "container-displayeffects">
+      <%= link_to "Retour à l'arène", root_path, class: "btn-back hide", id: "btn-back" %>
+      <div class = "countdown-text" id = "countdown-text">Le <span id = "encours"> duel </span> débute dans <span id = "bigtime">3</span> secondes. </div>
+      <span class = "hide" id = "bigmsg"> Joutez! </span>
+      <div class = "gif-space" id = "gifspace"></div>
+      <div class = "gif-space2 hide" id = "gifspace2"></div>
+      <div class = "gif-space3 hide" id = "gifspace3"></div>
 
-  <div class="row">
-    <div class="card-seduced hide" id = "card-seduced">
-    <div id ="cardtime"> 10</div>
-    <%= image_tag "logo.png", class: "logo_small" %>
-        <p> <span class = "generated_text"> Votre douce s'appelle </span><br/>
-    <strong> <%=  @challenge.seduced.first_name %>  </strong></p>
-     <p> <span class = "generated_text"> Elle est</span> <br/>
-    <strong> <%=  @challenge.seduced.i_am %> </strong></p>
-    <p> <span class = "generated_text"> Elle aime</span><br/>
-    <strong> <%=  @challenge.seduced.i_like %>  </strong></p>
-    <p> <span class = "generated_text"> Elle recherche</span><br/>
-    <strong> <%=  @challenge.seduced.i_look_for %> </span></strong></p>
-  </div>
+      <div class="hide" id = "wrapper-avatar-seduced">
+        <div id="f1_container">
+          <div id="f1_card" class="shadow">
+            <div class="front face avatar-logo">
+              <%= image_tag "logo.png", class: "avatar-img"%>
+            </div>
+            <div class="back face center">
+              <%= image_tag "audrey.png", class: "avatar-photo" %>
+              <div class="message-footer-seduced"> <%=  @challenge.seduced.first_name %></div>
+            </div>
+          </div>
+        </div>
+        <div class = "" id = "loading_space"></div>
+        <div class = "hide" id = "reveal_space"> Félicitations, vous avez triomphé.
+          <div class="btn-red-custom btn-lg active jouer">Parler avec votre douce</div>
+        </div>
+      </div>
 
+      <div class="row">
+      <div class="container-card-seduced hide" id = "card-seduced">
+          <%= image_tag "logo.png", class: "logo_small" %>
+        <div class="card-seduced">
+        <div class= "disparition-carte" >La carte disparait dans</div>
+          <div id ="cardtime"> 10</div>
+              <p> <span class = "generated_text"> Votre douce s'appelle </span><br/>
+          <strong> <%=  @challenge.seduced.first_name %>  </strong></p>
+           <p> <span class = "generated_text"> Elle est</span> <br/>
+          <strong> <%=  @challenge.seduced.i_am %> </strong></p>
+          <p> <span class = "generated_text"> Elle aime</span><br/>
+          <strong> <%=  @challenge.seduced.i_like %>  </strong></p>
+          <p> <span class = "generated_text"> Elle recherche</span><br/>
+          <strong> <%=  @challenge.seduced.i_look_for %> </span></strong></p>
+        </div>
+      </div>
+      </div>
 
-    <div class="card-question hide" id = "card-question">
-    <div id ="cardtimeq"> 10</div>
-    <%= image_tag "logo.png", class: "logo_small" %>
+      <div class="card-question hide" id = "card-question">
+        <div id ="cardtimeq"> 10</div>
+        <%= image_tag "logo.png", class: "logo_small" %>
         <p> <span class = "generated_text"> Votre douce vous demande </span><br/>
-    <strong> "Quelle est votre pièce de théatre préferée?"</p> </strong>
-
-  </div>
+        <strong> "Quelle est votre pièce de théatre préferée?"</p> </strong>
+      </div>
 
       <div class="card-rival hide" id = "card-rival">
-    <div id ="cardtimer"> 10</div>
-    <%= image_tag "logo.png", class: "logo_small" %>
+        <div id ="cardtimer"> 10</div>
+        <%= image_tag "logo.png", class: "logo_small" %>
         <p> <span class = "generated_text"> Votre rival s'appelle </span><br/>
-    <strong> <%=  @challenge.seducer2.first_name %>  </strong></p>
-     <p> <span class = "generated_text"> Il est</span> <br/>
-    <strong> <%=  @challenge.seducer2.i_am %> </strong></p>
-    <p> <span class = "generated_text"> Il aime</span><br/>
-    <strong> <%=  @challenge.seducer2.i_like %>  </strong></p>
-    <p> <span class = "generated_text"> Il recherche</span><br/>
-    <strong> <%=  @challenge.seducer2.i_look_for %> </span></strong></p>
+        <strong> <%=  @challenge.seducer2.first_name %>  </strong></p>
+         <p> <span class = "generated_text"> Il est</span> <br/>
+        <strong> <%=  @challenge.seducer2.i_am %> </strong></p>
+        <p> <span class = "generated_text"> Il aime</span><br/>
+        <strong> <%=  @challenge.seducer2.i_like %>  </strong></p>
+        <p> <span class = "generated_text"> Il recherche</span><br/>
+        <strong> <%=  @challenge.seducer2.i_look_for %> </span></strong></p>
+      </div>
+
+      <div class="msg-seduced hide" id= "msgseduced">
+        <div class="message-content-seduced" id= "msgseducedcontent">Bonne chance mes courtisans ;)
+        </div>
+        <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
+      </div>
+    </div>
+
+    <div class="body-container-messages">
+      <div id="messages">
+        <%= render 'messages', challenge: @challenge %>
+      </div>
+    </div>
   </div>
 
-
-
-
-
-
-<div class="msg-seduced hide" id= "msgseduced">
-    <div class="message-content-seduced" id= "msgseducedcontent">Bonne chance mes courtisans ;)
-    </div>
-    <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
 </div>
 
 
-
-    <div id="messages">
-      <%= render 'messages', challenge: @challenge %>
-    </div>
-  </div>
-</div>
   <div class="container-input hide" id= "typebox">
     <div class="row">
       <div class="col-xs-12 col-md-offset-1 col-md-10">
@@ -108,10 +114,9 @@
     </div>
   </div>
 
+</div>
 
 
-</div>
-</div>
 <% content_for :after_js do %>
   <script>
   App.messages = App.cable.subscriptions.create('MessagesChannel', {
