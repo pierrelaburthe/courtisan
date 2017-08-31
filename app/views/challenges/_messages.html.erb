@@ -1,5 +1,5 @@
 <% j = 0 %>
-<% challenge.messages.each do |message| %>
+<% challenge.messages.order(:created_at).each do |message| %>
   <% j += 1 %>
   <%= render "messages/message", message: message, j: j %>
 <% end %>

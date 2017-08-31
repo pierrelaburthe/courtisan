@@ -194,12 +194,12 @@ toggleClass(card_question);
 },108000);
 
 setTimeout(function(){
-  msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
-  toggleClass(msgseduced);
+  // msgseducedcontent.innerHTML= "J'espère que la question vous inspire..."
+  // toggleClass(msgseduced);
 },128000);
 
   setTimeout(function(){
-  message_admin.innerHTML = "Votre rival à la préférence..."
+  message_admin.innerHTML = "Vous avez la préférence..."
     toggleClass(message_admin);
 },148000);
 
@@ -217,7 +217,7 @@ setTimeout(function(){
 setTimeout(function(){
     toggleClass(message_admin);
 
-      toggleClass(msgseduced);
+      // toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
     toggleClass(typebox);
@@ -228,14 +228,13 @@ setTimeout(function(){
    time_big.innerHTML ="3";
      toggleClass(gif3);
     encours.innerHTML = "round 3";
-
         clearInterval(intervalTimerseconds);
         var count = 2;
     startTimerseconds(count, time_big);
 },188000);
 
 setTimeout(function(){
-      toggleClass(countdownText);
+      // toggleClass(countdownText);
   countdownText.innerHTML= "Joutez!";
 },191000);
 
@@ -265,12 +264,12 @@ toggleClass(card_rival);
 },202000);
 
 setTimeout(function(){
-  message_admin.innerHTML = "Vous avez la préférence..."
-    toggleClass(message_admin);
+  // message_admin.innerHTML = "Vous avez la préférence..."
+  //   toggleClass(message_admin);
 },242000);
 
 setTimeout(function(){
-    toggleClass(message_admin);
+    // toggleClass(message_admin);
 },247000);
 
 setTimeout(function(){
@@ -282,7 +281,7 @@ setTimeout(function(){
 setTimeout(function(){
     message_admin.innerHTML = "Le duel est terminé.";
     // toggleClass(message_admin);
-      toggleClass(msgseduced);
+      // toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
     toggleClass(typebox);
