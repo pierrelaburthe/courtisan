@@ -84,7 +84,7 @@ const reveal_space = document.getElementById('reveal_space');
 const btn_back = document.getElementById('btn-back');
 const msg_manche = document.getElementById('msg-manche');
 const count_heart_blue = document.getElementById('count-heart-blue');
-const heart_3 = document.getElementById('heart_3');
+const count_heart_grey = document.getElementById('count-heart-grey');
 
 
 window.onload = function () {
@@ -93,14 +93,17 @@ window.onload = function () {
 };
 
 setTimeout(function(){
-  countdownText.innerHTML= "Joutez!";
+  // countdownText.innerHTML= "Joutez!";
+  toggleClass(message_big);
+  message_big.innerHTML= "Joutez!";
+    toggleClass(countdownText);
 },3000);
 
 setTimeout(function(){
   toggleClass(typebox);
-      toggleClass(gif);
-  toggleClass(countdownText);
-toggleClass(title);
+  toggleClass(gif);
+  toggleClass(message_big);
+  toggleClass(title);
   previousClass(container);
     toggleClass(card_seduced);
           clearInterval(intervalTimerseconds);
@@ -116,31 +119,49 @@ toggleClass(card_seduced);
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
-
 },14000);
 
 setTimeout(function(){
-
   toggleClass(msgseduced);
-
 },22000);
 //22000
 
 setTimeout(function(){
+const heart_3 = document.getElementById('heart_3');
 count_heart_blue.innerHTML = "1";
 toggleClass(heart_3);
-},30000);
-
-
+},20000);
 
 setTimeout(function(){
-  toggleClass(message_admin);
+const heart_3 = document.getElementById('heart_7');
+count_heart_blue.innerHTML = "2";
+toggleClass(heart_7);
+},30000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_8');
+count_heart_grey.innerHTML = "1";
+toggleClass(heart_8);
+},35000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_10');
+count_heart_grey.innerHTML = "2";
+toggleClass(heart_10);
+},110000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_9');
+count_heart_blue.innerHTML = "3";
+toggleClass(heart_9);
+},100000);
+
+setTimeout(function(){
+  message_admin.innerHTML= "Terminez votre présentation!"
   redClass(time_small);
 },74000);
 
-
 setTimeout(function(){
-    toggleClass(message_admin);
       toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
@@ -174,8 +195,6 @@ toggleClass(title);
     var card_count = 9;
     startTimerseconds(card_count, timecardq);
     toggleClass(card_question);
-// };
-
 },98000);
 // //98
 
