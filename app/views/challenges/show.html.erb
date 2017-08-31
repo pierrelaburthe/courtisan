@@ -1,33 +1,17 @@
 <div class="container-messenger" id="container-messenger" >
   <div class="container-messages" id="container-messages" >
 
-    <div class="header-messenger">
+<div class="header-messenger">
       <span class="message-content-admin hide" id = "msgadmin">Terminez votre présentation!</span>
       <span class= "counter-heart-grey fa fa-heart"></span>
       <span class= "counter-heart-blue fa fa-heart"></span>
       <span class= "count-heart-grey" id="count-heart-grey">0</span>
       <span class= "count-heart-blue" id="count-heart-blue">0</span>
 
-
-
       <h2 class = "hide" id="title"> Première manche. Présentez-vous.</h2>
       <span class = "msg-manche hide" id ="msg-manche">La manche se termine dans </span>
       <span class="avatar-time hide" id="smalltime"> 01:20 </span>
     </div>
-
-  </div>
-  </div>
-<div class = "" id = "loading_space"></div>
-<div class = "hide" id = "reveal_space"> Félicitations, vous avez triomphé.
-
-  <%= form_for @chatroom do |f| %>
-    <%= f.hidden_field :seduced_id, value: @challenge.seduced_id %>
-    <%= f.hidden_field :seducer_id, value: current_user.id %>
-    <%= f.submit "Parler avec votre douce", class: "btn-red-custom btn-lg active jouer"%>
-  <% end %>
-
-   </div>
-</div>
 
     <div class="container-displayeffects previous-color" id= "container-displayeffects">
       <%= link_to "Retour à l'arène", root_path, class: "btn-back hide", id: "btn-back" %>
@@ -92,29 +76,20 @@
         <p> <span class = "generated_text"> Il recherche</span><br/>
         <strong> <%=  @challenge.seducer2.i_look_for %> </span></strong></p>
       </div>
-    </div>
-
-    <div class="body-container-messages">
 
       <div class="msg-seduced hide" id= "msgseduced">
         <div class="message-content-seduced" id= "msgseducedcontent">Bonne chance mes courtisans ;)
         </div>
         <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
       </div>
+    </div>
 
+    <div class="body-container-messages">
       <div id="messages">
         <%= render 'messages', challenge: @challenge %>
       </div>
-
-
     </div>
-
-
-
   </div>
-
-</div>
-
 
   <div class="container-input hide" id= "typebox">
     <div class="row">
@@ -135,6 +110,9 @@
   App.messages = App.cable.subscriptions.create('MessagesChannel', {
     received: function(data) {
       if (data.challenge_id === <%= @challenge.id %>) {
+        // $("#messages").removeClass('hidden');
+
+        // Fetch all messages
         $.getScript("<%= challenge_path(@challenge) %>");
 
         if (data.user_id == <%= current_user.id %>) {
@@ -143,9 +121,7 @@
       }
     }
   });
+
+
   </script>
 <% end %>
-
-
-
-
