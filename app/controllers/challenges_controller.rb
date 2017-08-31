@@ -2,6 +2,7 @@ class ChallengesController < ApplicationController
 
   def show
     @message = Message.new
+    @chatroom = Chatroom.new
     @challenge = Challenge.find(params[:id])
     @seducer1 = @challenge.seducer1
     @seducer2 = @challenge.seducer2

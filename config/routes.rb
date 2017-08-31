@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :messages, only: [ :create ]
   end
 
+
   get 'challenges/wait'
 
   get 'users/profile'
@@ -19,6 +20,10 @@ Rails.application.routes.draw do
   resources :waiting_lists, only: [:create]
 
   get 'pages/wait'
+
+  resources :chatrooms, only: [:create, :show] do
+    resources :discussions, only: [:create]
+  end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

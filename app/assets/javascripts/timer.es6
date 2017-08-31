@@ -106,7 +106,7 @@ toggleClass(title);
     var card_count = 9;
     startTimerseconds(card_count, timecard);
 },4000);
-
+//lslslsls
 
 setTimeout(function(){
 toggleClass(card_seduced);
@@ -363,16 +363,16 @@ setTimeout(function(){
     toggleClass(message_admin);
   }
   redClass(time_small);
-},1);
+},168);
 
 setTimeout(function(){
     toggleClass(message_admin);
->>>>>>> master
+
       toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);
     toggleClass(typebox);
-<<<<<<< add-button-root
+
     toggleClass(time_small);
   toggleClass(msg_manche);
  toggleClass(title);
@@ -396,7 +396,7 @@ setTimeout(function(){
       toggleClass(countdownText);
 
   title.innerHTML = "Troisième manche. Provoquez votre rival."
-=======
+  
      toggleClass(time_small);
  toggleClass(title);
   toggleClass(countdownText);
@@ -423,24 +423,12 @@ setTimeout(function(){
   if (title !== null) {
     title.innerHTML = "Troisième manche. Provoquez votre rival."
   }
->>>>>>> master
-toggleClass(title);
-  toggleClass(gif3);
-  previousClass(container);
-  clearInterval(intervalTimerseconds);
-    var card_count = 9;
-    startTimerseconds(card_count, timecardr);
-    toggleClass(card_rival);
-<<<<<<< add-button-root
 },192000);
-=======
-},1);
->>>>>>> master
 
 setTimeout(function(){
 toggleClass(card_rival);
  toggleClass(time_small);
-<<<<<<< add-button-root
+
   toggleClass(msg_manche);
      time_small.innerHTML ="01:20";
     clearInterval(intervalTimerminutes);
@@ -474,22 +462,22 @@ setTimeout(function(){
       toggleClass(time_small);
   toggleClass(msg_manche);
 title.innerHTML = "Votre courtisée prend sa décision"
-=======
+
     clearInterval(intervalTimerseconds);
     var one_round = 79;
       startTimer(one_round, time_small);
-},1);
+},282000);
 
 setTimeout(function(){
   if (message_admin !== null) {
     message_admin.innerHTML = "Vous avez la préférence..."
     toggleClass(message_admin);
   }
-},1);
+},284000);
 
 setTimeout(function(){
     toggleClass(message_admin);
-},1);
+},286000);
 
 //   setTimeout(function(){
 //   message_admin.innerHTML = "Votre rival à la préférence..."
@@ -573,54 +561,6 @@ setTimeout(function(){
 //   redClass(time_small);
 // },262000);
 
-
-setTimeout(function(){
-  if (message_admin !== null) {
-    message_admin.innerHTML = "Achevez votre rival!";
-    toggleClass(message_admin);
-    redClass(time_small);
-  }
-},1);
-
-
-setTimeout(function(){
-  toggleClass(message_admin);
-  toggleClass(msgseduced);
-  redClass(time_small);
-  previousClass(container);
-  toggleClass(typebox);
-  toggleClass(time_small);
-  if (title !== null) {
-    title.innerHTML = "Votre courtisée prend sa décision"
-  }
-  // toggleClass(loading_space);
-  if (loading_space !== null) {
-    loading_space.classList.toggle("loading");
-  }
-  toggleClass(wrapper_avatar_seduced);
-},1);
-//282
-
-//285
-setTimeout(function(){
-// title.innerHTML = "Félicitations, vous êtes le vainqueur."
-  if (title !== null) {
-    title.innerHTML = "Votre courtisée a pris sa décision."
-  }
-
-toggleClass(loading_space);
-
-},1);
-//286
-
-setTimeout(function(){
-toggleClass(reveal_space);
-},1);
-
-setTimeout(function(){
-revealClass(avatar_seduced);
-},1);
-=======
 // setTimeout(function(){
 //     message_admin.innerHTML = "Le duel est terminé.";
 //     // toggleClass(message_admin);
@@ -642,7 +582,8 @@ revealClass(avatar_seduced);
 //   toggleClass(message_admin);
 // // title.innerHTML = "Félicitations, vous êtes le vainqueur."
 // title.innerHTML = "Votre courtisée a pris sa décision."
->>>>>>> master
+
+
 // toggleClass(loading_space);
        loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);

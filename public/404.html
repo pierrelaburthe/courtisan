@@ -1,67 +1,140 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+  <head>
+  <meta charset="UTF-8">
+
+
+    <!-- Le fonts -->
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Palanquin:100,300,400|Roboto|Satisfy');
+
+
+.home-container {
+  height: 100vh;
+  text-align: center;
+}
+
+.maxi-row {
+  text-align: center;
+  background-color: #e8e8e8;
+}
+
+.underline {
+   border-bottom: 1px solid;
+}
+
+.icon {
+color: rgba(255,255,255,0.7);
+  height: 40px;
+}
+
+.feature-item{
+  text-align:center;
+  background-color: #3A718C;
+  color: rgba(255,255,255,0.7);
+
+  height:150px;
+}
+.feature-item h3{
+    padding-top: 15px;
+  margin:0px;
+  }
+.feature-item  p{
+    color: rgba(255,255,255,0.4);
+    font-weight: lighter;
+        padding-top: 15px;
+            font-style: italic;
+
   }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+body {
+  margin: 0px;
+}
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+.banner-home {
+  background-size: cover;
+  background-position:center center;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+.banner-home .banner-content{
+    height: 80vh;
+    display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-between;
+  align-items:center;
+}
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+
+
+
+.banner-waiting {
+  background-size: cover;
+  background-position:center center;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+}
+
+
+.banner-message-waiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  padding-top:40px;
+  font-weight:lighter;
+  color: white;
+
+}
+
+.banner-home p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+
+.banner-message{
+  font-size: 50px;
+  margin-top: 0px;
+  padding-top:40px;
+  font-weight:lighter;
+  color: rgba(255,255,255,1);
+  font-family: Satisfy;
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+
+</style>
+
+
+
+  </head>
+
+  <body>
+
+<div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,36,0.6) 50%), url(/images/fille.jpg);">
+
+ <h1 class ="banner-message" >Votre requête n'est pas digne d'un courtisan. Réessayez autrement, si vous en êtes capable.</h1>
+
+
+  </body>
 </html>
+
+<!-- Wed, 30 Aug 2017 21:02:14 +0000 -->

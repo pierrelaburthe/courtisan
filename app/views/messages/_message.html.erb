@@ -2,7 +2,10 @@
 <div class="<%= message.user == current_user ? "text-right" : "text-left" %>" >
   <div class="message-body">
     <div class="<%= message.user == current_user ? "message-content-me" : "message-content-rival" %>">
-      <%= message.content %>
+      <%#= message.content %>
+      <%# binding.pry %>
+      <%= emojify message.content %>
+      <%# binding.pry %>
     </div>
     <div class="<%= message.user == current_user ? "message-footer" : "message-footer-rival" %>" >
     <span class="first-name">
