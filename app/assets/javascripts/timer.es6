@@ -84,7 +84,8 @@ const reveal_space = document.getElementById('reveal_space');
 const btn_back = document.getElementById('btn-back');
 const msg_manche = document.getElementById('msg-manche');
 const count_heart_blue = document.getElementById('count-heart-blue');
-const heart_3 = document.getElementById('heart_3');
+const count_heart_grey = document.getElementById('count-heart-grey');
+
 
 
 window.onload = function () {
@@ -127,10 +128,34 @@ setTimeout(function(){
 //22000
 
 setTimeout(function(){
+const heart_3 = document.getElementById('heart_3');
 count_heart_blue.innerHTML = "1";
 toggleClass(heart_3);
+},20000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_7');
+count_heart_blue.innerHTML = "2";
+toggleClass(heart_7);
 },30000);
 
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_8');
+count_heart_grey.innerHTML = "1";
+toggleClass(heart_8);
+},35000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_10');
+count_heart_grey.innerHTML = "2";
+toggleClass(heart_10);
+},110000);
+
+setTimeout(function(){
+const heart_3 = document.getElementById('heart_9');
+count_heart_blue.innerHTML = "3";
+toggleClass(heart_9);
+},100000);
 
 
 setTimeout(function(){
@@ -140,7 +165,6 @@ setTimeout(function(){
 
 
 setTimeout(function(){
-    toggleClass(message_admin);
       toggleClass(msgseduced);
       redClass(time_small);
     previousClass(container);

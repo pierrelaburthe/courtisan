@@ -190,6 +190,7 @@
 .message-content-admin{
   // color: rgb(150,150,150);
 // color: #28CC9E;
+font-family: Satisfy;
 color: #750800;
 font-weight: bolder;
 font-size: 20px;
@@ -208,6 +209,7 @@ font-size: 20px;
 
 .message-footer{
 position: relative;
+margin-top:0px;
 height:20px;
   .first-name{
     position: absolute;
@@ -217,6 +219,7 @@ height:20px;
 }
         .fa-heart{
               position: absolute;
+              top: 5px;
     left: 5px;
     padding-right: 220px;
     font-size: 23px;
