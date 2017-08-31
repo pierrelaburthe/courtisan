@@ -19,7 +19,15 @@
   max-width: 1000px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: inset -7px -110px #f4f4f4;
+  box-shadow: inset 0px -110px #f4f4f4;
+
+  form {
+    padding: 0 20px;
+  }
+
+  label {
+    opacity: 0;
+  }
 
   .gif-space {
     height: 100%;
@@ -29,7 +37,7 @@
   }
 
   .body-container-messages{
-    height: auto;
+    min-height: 490px;
     overflow: auto;
     text-align: center;
     position: relative;
@@ -97,15 +105,16 @@
 
 .message-content-admin{
   position: absolute;
-  top: 5px;
-  left: 100px;
+  bottom: 69px;
+  left: 30px;
   font-size:20px;
-  }
- .counter-heart-grey, .counter-heart-blue {
+}
+
+.counter-heart-grey, .counter-heart-blue {
   position: absolute;
   top: 5px;
-    font-size:35px;
- }
+  font-size:35px;
+}
 
  .count-heart-grey, .count-heart-blue {
     position: absolute;

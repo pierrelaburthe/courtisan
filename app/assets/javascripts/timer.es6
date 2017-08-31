@@ -134,7 +134,7 @@ toggleClass(heart_3);
 
 
 setTimeout(function(){
-  toggleClass(message_admin);
+  message_admin.innerHTML= "Terminez votre présentation!"
   redClass(time_small);
 },74000);
 
