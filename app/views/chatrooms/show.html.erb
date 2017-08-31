@@ -1,17 +1,19 @@
-<h4>Parlez avec votre douce</h4>
 
-<div class="messages">
- <% @chatroom.discussions.each do |discussion| %>
-  <%= render "discussions/discussion", discussion: discussion %>
- <% end %>
-</div>
 
-<div id="create-discussion">
-  <%= simple_form_for [@chatroom, Discussion.new], remote: true do |f| %>
-    <%= f.error_notification %>
-    <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= f.input :content, label: false %>
-  <% end %>
+    <div class="messages">
+      <% @chatroom.discussions.each do |discussion| %>
+        <%= render "discussions/discussion", discussion: discussion %>
+      <% end %>
+    </div>
+
+    <div id="create-discussion">
+      <%= simple_form_for [@chatroom, Discussion.new], remote: true do |f| %>
+        <%= f.error_notification %>
+        <%#= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <%= f.input :content, label: false, placeholder: "Écrivez à votre dulcinée" %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
