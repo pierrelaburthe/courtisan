@@ -61,8 +61,42 @@
 .message-content-admin{
   position: absolute;
   top: 5px;
-  left: 5px;
+  left: 40px;
   font-size:25px;
+  }
+ .counter-heart-grey, .counter-heart-blue {
+  position: absolute;
+  top: 5px;
+    font-size:35px;
+ }
+
+ .count-heart-grey, .count-heart-blue {
+    position: absolute;
+  top: 10px;
+      font-size:18px;
+      font-weight: 100;
+ }
+
+  .count-heart-grey {
+  left: 22px;
+  color: black;
+  }
+
+.count-heart-blue {
+  left: 59px;
+  color: white;
+}
+
+
+
+ .counter-heart-grey{
+  left: 10px;
+  color:#e2e0e0;
+  }
+
+  .counter-heart-blue{
+  left: 47px;
+  color:#0245A3;
   }
 
 .container-messages{
@@ -128,18 +162,24 @@ font-size: 20px;
   font-size: 15px;
   color: rgb(200,200,200);
          font-family: 'Satisfy';
-
 }
 
 .message-footer{
   text-align: center;
 }
 
-
 .message-footer{
-  margin-right: 17px;
-  text-align: right;
+position: relative;
+height:20px;
+  .first-name{
+    position: absolute;
+    right: 5px;
+  // margin-right: 17px;
+  // text-align: right;
+}
         .fa-heart{
+              position: absolute;
+    left: 5px;
     padding-right: 220px;
     font-size: 23px;
     color: #750800;
@@ -147,8 +187,11 @@ font-size: 20px;
 }
 
 .message-footer-rival{
-  margin-left: 25px;
+  .first-name{
+   margin-left: 25px;
   text-align: left;
+  }
+
       .fa-heart{
     padding-left: 220px;
     font-size: 23px;
