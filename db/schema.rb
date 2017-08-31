@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828103929) do
+ActiveRecord::Schema.define(version: 20170830092352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,25 @@ ActiveRecord::Schema.define(version: 20170828103929) do
     t.index ["seducer1_id"], name: "index_challenges_on_seducer1_id"
     t.index ["seducer2_id"], name: "index_challenges_on_seducer2_id"
     t.index ["winner_id"], name: "index_challenges_on_winner_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.bigint "seducer_id"
+    t.bigint "seduced_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seduced_id"], name: "index_chatrooms_on_seduced_id"
+    t.index ["seducer_id"], name: "index_chatrooms_on_seducer_id"
+  end
+
+  create_table "discussions", force: :cascade do |t|
+    t.bigint "chatroom_id"
+    t.string "content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_discussions_on_chatroom_id"
+    t.index ["user_id"], name: "index_discussions_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -89,6 +108,10 @@ ActiveRecord::Schema.define(version: 20170828103929) do
   add_foreign_key "challenges", "users", column: "seducer1_id"
   add_foreign_key "challenges", "users", column: "seducer2_id"
   add_foreign_key "challenges", "users", column: "winner_id"
+  add_foreign_key "chatrooms", "users", column: "seduced_id"
+  add_foreign_key "chatrooms", "users", column: "seducer_id"
+  add_foreign_key "discussions", "chatrooms"
+  add_foreign_key "discussions", "users"
   add_foreign_key "messages", "challenges"
   add_foreign_key "messages", "users"
   add_foreign_key "waiting_lists", "users", column: "seduced_id"

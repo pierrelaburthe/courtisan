@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_reader :sending_challenges
+  attr_reader :sending_challenges, :sending_chatrooms
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,6 +8,9 @@ class User < ApplicationRecord
 
 
   has_many :messages
+  has_many :discussions
+
+
 
 
   validates :email, presence: true
@@ -49,6 +52,12 @@ class User < ApplicationRecord
   def sending_challenges
     Challenge.where(seducer1: self.id)
   end
+
+
+  def sending_chatrooms
+    Chatroom.where(seducer: self.id)
+  end
+
 
 
 
