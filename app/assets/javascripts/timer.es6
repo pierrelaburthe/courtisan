@@ -129,7 +129,7 @@ setTimeout(function(){
 setTimeout(function(){
 count_heart_blue.innerHTML = "1";
 toggleClass(heart_3);
-},10000);
+},30000);
 
 
 
