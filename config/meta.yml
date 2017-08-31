@@ -1,5 +1,5 @@
 meta_product_name: "Courtisan"
 meta_title: "Courtisan - le jeu de séduction"
 meta_description: "Courtisan refait de la séduction ce qu'elle est vraiment : un jeu. A visage masqué, joute contre d'autres prétendant(e)s, brille par ton éloquence et gagne les faveurs de ton public. Attrape les tou(te)s ! Défie tes amis, humilie les prétendants, deviens le meilleur courtisan."
-meta_image: "fille.jpg"                       # should exist in `app/assets/images/`
-twitter_account: "@https://twitter.com/App_Courtisan"   # required for Twitter Cards
+meta_image: "meta-banner.jpg"                       # should exist in `app/assets/images/`
+twitter_account: "@App_Courtisan"   # required for Twitter Cards
