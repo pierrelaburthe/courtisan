@@ -1,9 +1,39 @@
+.container-all {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .container-messenger{
   background-color:#750800;
   margin-top: 0px;
   padding-top: 10px;
   height: 100vh;
 }
+
+.container-messages{
+  position: relative;
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 662px;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: inset -7px -110px #f4f4f4;
+
+  .gif-space {
+    height: 100%;
+    background-size: cover;
+    margin-top:50px;
+    background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
+  }
+
+  .body-container-messages{
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+  }
 
 .header-messenger{
 
@@ -39,8 +69,13 @@
   font-size:20px;
 }
 
-.container-card-seduced{
-  align-items: center;
+.container-card-seduced,
+.card-question,
+.card-rival {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .msg-manche{
@@ -51,11 +86,13 @@
 }
 
 .text-right{
-  margin-left: 115vh;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .text-left{
-  margin-right: 90vh;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .message-content-admin{
@@ -98,22 +135,6 @@
   left: 47px;
   color:#0245A3;
   }
-
-.container-messages{
-  margin-left:60px;
-  margin-top: 0px;
-  width: 160vh;
-  padding: 10px;
-  padding-top: 0px;
-  height: 85vh;
-  background-color: white;
-  border-radius: 5px;
-  .body-container-messages{
-    height: 72vh;
-    overflow: auto;
-    text-align: center;
-    position: relative;
-  }
 }
 
 
@@ -136,11 +157,19 @@
   margin-left: 15px;
 }
 
-.message-content-seduced {
-  color: white;
-  background-color: #750800;
-    margin-left: 60vh;
+
+.message-seduced {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  .message-content-seduced {
+    color: white;
+    background-color: #750800;
     text-align:center;
+  }
 }
 .message-content-rival{
   color: black;
@@ -158,10 +187,10 @@ font-size: 20px;
 }
 
 .message-footer, .message-footer-rival, .message-footer-seduced{
-
+  margin-top: 10px;
   font-size: 15px;
   color: rgb(200,200,200);
-         font-family: 'Satisfy';
+  font-family: 'Satisfy';
 }
 
 .message-footer{

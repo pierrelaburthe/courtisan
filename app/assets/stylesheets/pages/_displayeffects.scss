@@ -1,17 +1,18 @@
+.container-displayeffects{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  text-align: center;
+  z-index: 5;
+}
+
 .countdown-text, #bigmsg {
-    padding-top: 20px;
+  padding-top: 20px;
   font-family: Satisfy;
   font-weight: 100;
   font-size: 40px;
-}
-
-.container-displayeffects{
-  position: absolute;
-  z-index: 5;
-  width:158vh;
-  text-align: center;
-  align-items: center;
-  margin: auto;
 }
 
 .red{
@@ -20,20 +21,22 @@
 }
 
 .btn-back{
-position: absolute;
-top: 10px;
-left:10px;
-background-color: rgb(200,200,200);
-color: white;
-font-size: 20px;
-
-padding: 10px;
-
-&:hover{
-  text-decoration: none;
+  font-family: Satisfy;
+  border-radius: 4px;
+  position: absolute;
+  top: 5px;
+  left:5px;
+  background-color: rgb(150,150,150);
   color: white;
-  background-color: rgb(180,180,180);
-}
+  font-size: 20px;
+
+  padding: 10px;
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(180,180,180);
+  }
 }
 
 .avatar-photo, .avatar-logo{
@@ -52,11 +55,12 @@ height: 40px;
 }
 
 #wrapper-avatar-seduced {
-  height: 63vh;
+  height: 72vh;
 
 }
 
 #loading_space, #reveal_space {
+  font-family: Satisfy;
     font-size: 70px;
     height:20vh;
   color: #750800;
@@ -108,7 +112,7 @@ font-size: 20px;
 
 .card-seduced, .card-question, .card-rival {
 
-text-align: center;
+  text-align: center;
   font-family: Palanquin;
   position: relative;
   width: 300px;
@@ -144,15 +148,11 @@ border-bottom-width: 1px;
 }
 
 .gif-space, .gif-space2, .gif-space3{
+  height: 100%;
+  min-height: 515px;
   background-size: cover;
-  height: 66vh;
-
 }
 
-.gif-space{
-    margin-top:50px;
-  background-image: url("https://media.giphy.com/media/3oEjI1erPMTMBFmNHi/giphy.gif");
-}
 
 .gif-space2{
 background-image: url("https://media.giphy.com/media/l41lKvLqu2xcYX8ly/giphy.gif");

@@ -158,9 +158,7 @@ setTimeout(function(){
 },94000);
 //94
 
-
 setTimeout(function(){
-
   countdownText.innerHTML= "Joutez!";
 },97000);
 
@@ -168,7 +166,6 @@ setTimeout(function(){
 setTimeout(function(){
   toggleClass(typebox);
       toggleClass(countdownText);
-
   title.innerHTML = "Seconde manche. Répondez à votre courtisée."
 toggleClass(title);
   toggleClass(gif2);
@@ -186,7 +183,6 @@ toggleClass(title);
 toggleClass(card_question);
  toggleClass(time_small);
   toggleClass(msg_manche);
-
     time_small.innerHTML ="01:20";
     clearInterval(intervalTimerminutes);
     var one_round = 79;
@@ -240,8 +236,7 @@ setTimeout(function(){
 
 setTimeout(function(){
   toggleClass(typebox);
-      toggleClass(countdownText);
-
+  toggleClass(countdownText);
   title.innerHTML = "Troisième manche. Provoquez votre rival."
 toggleClass(title);
   toggleClass(gif3);
@@ -289,7 +284,7 @@ setTimeout(function(){
   toggleClass(msg_manche);
 title.innerHTML = "Votre courtisée prend sa décision"
 // toggleClass(loading_space);
-       loading_space.classList.toggle("loading");
+       // loading_space.classList.toggle("loading");
   toggleClass(wrapper_avatar_seduced);
 },282000);
 //282
@@ -300,7 +295,6 @@ setTimeout(function(){
 // title.innerHTML = "Félicitations, vous êtes le vainqueur."
 title.innerHTML = "Votre courtisée a pris sa décision."
 toggleClass(loading_space);
-
 },286000);
 //286
 
