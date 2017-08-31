@@ -3,6 +3,13 @@
 
     <div class="header-messenger">
       <span class="message-content-admin hide" id = "msgadmin">Terminez votre présentation!</span>
+      <span class= "counter-heart-grey fa fa-heart"></span>
+      <span class= "counter-heart-blue fa fa-heart"></span>
+      <span class= "count-heart-grey" id="count-heart-grey">0</span>
+      <span class= "count-heart-blue" id="count-heart-blue">0</span>
+
+
+
       <h2 class = "hide" id="title"> Première manche. Présentez-vous.</h2>
       <span class = "msg-manche hide" id ="msg-manche">La manche se termine dans </span>
       <span class="avatar-time hide" id="smalltime"> 01:20 </span>
@@ -71,19 +78,25 @@
         <p> <span class = "generated_text"> Il recherche</span><br/>
         <strong> <%=  @challenge.seducer2.i_look_for %> </span></strong></p>
       </div>
+    </div>
+
+    <div class="body-container-messages">
 
       <div class="msg-seduced hide" id= "msgseduced">
         <div class="message-content-seduced" id= "msgseducedcontent">Bonne chance mes courtisans ;)
         </div>
         <div class="message-footer-seduced"><%=  @challenge.seduced.first_name %></div>
       </div>
-    </div>
 
-    <div class="body-container-messages">
       <div id="messages">
         <%= render 'messages', challenge: @challenge %>
       </div>
+
+
     </div>
+
+
+
   </div>
 
   <div class="container-input hide" id= "typebox">
@@ -116,8 +129,6 @@
       }
     }
   });
-
-
   </script>
 <% end %>
 
