@@ -83,6 +83,8 @@ const loading_space = document.getElementById('loading_space');
 const reveal_space = document.getElementById('reveal_space');
 const btn_back = document.getElementById('btn-back');
 const msg_manche = document.getElementById('msg-manche');
+const count_heart_blue = document.getElementById('count-heart-blue');
+const heart_3 = document.getElementById('heart_3');
 
 
 window.onload = function () {
@@ -123,6 +125,12 @@ setTimeout(function(){
 
 },22000);
 //22000
+
+setTimeout(function(){
+count_heart_blue.innerHTML = "1";
+toggleClass(heart_3);
+},10000);
+
 
 
 setTimeout(function(){
