@@ -181,13 +181,14 @@ setTimeout(function(){
 //94
 
 setTimeout(function(){
-  countdownText.innerHTML= "Joutez!";
+    toggleClass(message_big);
+  toggleClass(countdownText);
 },97000);
 
 
 setTimeout(function(){
   toggleClass(typebox);
-      toggleClass(countdownText);
+     toggleClass(message_big);
   title.innerHTML = "Seconde manche. Répondez à votre courtisée."
     message_admin.innerHTML= "Lache ton inspi"
 toggleClass(title);
@@ -259,6 +260,7 @@ setTimeout(function(){
   toggleClass(typebox);
   toggleClass(countdownText);
   title.innerHTML = "Troisième manche. Provoquez votre rival."
+    message_admin.innerHTML = "Ris de ton adversaire.";
 toggleClass(title);
   toggleClass(gif3);
   previousClass(container);
