@@ -130,31 +130,32 @@ setTimeout(function(){
 const heart_3 = document.getElementById('heart_3');
 count_heart_blue.innerHTML = "1";
 toggleClass(heart_3);
-},20000);
+},50000);
 
 setTimeout(function(){
 const heart_3 = document.getElementById('heart_7');
 count_heart_blue.innerHTML = "2";
 toggleClass(heart_7);
-},30000);
+},70000);
 
 setTimeout(function(){
 const heart_3 = document.getElementById('heart_8');
 count_heart_grey.innerHTML = "1";
 toggleClass(heart_8);
-},35000);
+},90000);
 
 setTimeout(function(){
-const heart_3 = document.getElementById('heart_10');
-count_heart_grey.innerHTML = "2";
-toggleClass(heart_10);
+const heart_3 = document.getElementById('heart_11');
+count_heart_blue.innerHTML = "3";
+toggleClass(heart_9);
 },110000);
 
 setTimeout(function(){
-const heart_3 = document.getElementById('heart_9');
-count_heart_blue.innerHTML = "3";
-toggleClass(heart_9);
-},100000);
+const heart_3 = document.getElementById('heart_14');
+count_heart_grey.innerHTML = "2";
+toggleClass(heart_10);
+},170000);
+
 
 setTimeout(function(){
   message_admin.innerHTML= "Terminez votre présentation!"
@@ -188,6 +189,7 @@ setTimeout(function(){
   toggleClass(typebox);
       toggleClass(countdownText);
   title.innerHTML = "Seconde manche. Répondez à votre courtisée."
+    message_admin.innerHTML= "Lache ton inspi"
 toggleClass(title);
   toggleClass(gif2);
   previousClass(container);
