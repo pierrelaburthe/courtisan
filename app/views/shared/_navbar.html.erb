@@ -22,12 +22,12 @@
 
         </button>
         <ul class="dropdown-menu navbar-wagon-dropdown-menu">
-        <% if current_user.sending_chatrooms.blank? %>
+        <% if current_user.sending_challenges.blank? %>
           <%= link_to "Vous n'avez pas encore de discussion", id: "design-dropdown"%>
         <% else %>
-          <% current_user.sending_chatrooms.each do |chatroom| %>
+          <% current_user.sending_challenges.each do |challenge| %>
             <li>
-              <%= link_to chatroom.seduced.first_name, chatroom_path(chatroom), class: "text-small" %>
+              <%= link_to challenge.seduced.first_name, challenge_path(challenge), class: "text-small" %>
             </li>
           <% end %>
         <% end %>
